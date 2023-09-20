@@ -1,0 +1,52 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.input {
+    padding: 5rem;
+    text-align: center;
+    margin: auto;
+}
+
+#binInput {
+    width: 20rem;
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffcc7b;
+    border: none;
+    border-radius: 10px;
+}
+
+.button {
+    text-align: center;
+}
+
+#computeBtn {
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #f9f871;
+    border-radius: 100px;
+    border: none;
+    color: #a58fa1;
+    font-size: 1rem;
+}
+
+#computeBtn:hover {
+    background-color: #ffff00;
+    color: #808080;
+}
+
+#result {
+    text-align: center;
+    padding: 5rem;
+    color: white;
+    font-size: 2.4rem;
+}

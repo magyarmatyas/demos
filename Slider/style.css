@@ -1,0 +1,108 @@
+body {
+    padding: 0;
+    margin: auto;
+    background-color: #03152d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.hidden {
+    display: none;
+}
+
+.image{
+    display: grid;
+    height: 100%;
+}
+
+.center {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.arrowRight {
+    filter: invert(99%) sepia(97%) saturate(2%) hue-rotate(276deg) brightness(107%) contrast(101%);
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 50%;
+    right: 10rem;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+}
+
+.arrowRight:hover {
+    filter: invert(99%) sepia(97%) saturate(2%) hue-rotate(276deg) brightness(107%) contrast(101%);
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 50%;
+    right: 10rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.arrowLeft {
+    filter: invert(99%) sepia(97%) saturate(2%) hue-rotate(276deg) brightness(107%) contrast(101%);
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.arrowLeft:hover {
+    filter: invert(99%) sepia(97%) saturate(2%) hue-rotate(276deg) brightness(107%) contrast(101%);
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.counterText {
+    position: absolute;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    bottom: 0.8rem;
+    font-size: 1.2rem;
+    justify-content: center;
+    min-width: 45px;
+}
+
+.counter {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 50%;
+    min-width: 50px;
+}
+
+.downBtn {
+    filter: invert(99%) sepia(97%) saturate(2%) hue-rotate(276deg) brightness(107%) contrast(101%);
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    bottom: 0.8rem;
+    cursor: pointer;
+    right: 7%;
+    bottom: 2%;
+}
