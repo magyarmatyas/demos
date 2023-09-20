@@ -14,6 +14,9 @@ const player1 = document.querySelector(".player--1");
 let active = document.querySelector(".player--active");
 let activeCurr = active.querySelector(".current-score");
 let activeScore = active.querySelector(".score");
+const audioRoll = new Audio('roll.mp3');
+const audioWin = new Audio('win.wav');
+
 
 const swtchPlr = function() {
     active = document.querySelector(".player--active");
@@ -45,6 +48,7 @@ const roll = function() {
         activeCurr.innerHTML = 0;
         swtch();
     }
+    audioRoll.play();
     console.log(rollValue);
 }
 
@@ -53,9 +57,11 @@ const hold = function() {
     activeCurr.innerHTML = 0;
     swtch();
     if (Number(score0.innerHTML) >= "100") {
+        audioWin.play();
         alert("Játékos 1 nyert!")
         newGame();
     } else if (Number(score1.innerHTML) >= "100") {
+        audioWin.play();
         alert("Játékos 2 nyert!")
         newGame();
     }
