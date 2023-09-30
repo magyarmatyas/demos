@@ -30,7 +30,7 @@ const searchWeather = () => {
 
     if(input.value !== "") {
         error.style.display = "none";
-        json.current.is_day ? appBody.style = "background-image: linear-gradient(to left top, #003182, #275ba4, #4e86c4, #7bb2e2, #aedeff);" : appBody.style = " background-image: linear-gradient(to left top, #1a1c25, #1d1f29, #1f222e, #222532, #252837);";
+        json.current.is_day ? appBody.style = "background-image: linear-gradient(to left top, #003182, #275ba4, #4e86c4, #7bb2e2, #aedeff)" : appBody.style = "background-image: linear-gradient(to left top, #1b283b, #26334c, #323e5d, #404a6f, #4f5581)";
         document.querySelector(".weatherbox").style.display = "block";
         document.querySelector(".weatherdetails").style.display = "flex";
         appBody.style.height = "600px";
@@ -128,8 +128,3 @@ input.addEventListener('keypress', function (e) {
       searchWeather();
     }
 });
-window.onload = function () {
-    
-    appBody.style.display = "flex";
-
-};
