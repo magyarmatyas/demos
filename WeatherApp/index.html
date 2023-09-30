@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="app">
+
+        <div class="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" class="searchbar" placeholder="City">
+            <button class="fa-solid fa-magnifying-glass btn"></button>
+        </div>
+
+        <div class="errordiv fadeIn"><img class="error fadeIn" src="404.png"></div>
+        <div class="weatherbox">
+            <p class="cityname"></p>
+            <div class="img"><img class="image" src=""></div>
+
+            <p class="description"></p>
+            <p class="temperature"></p>
+        </div>
+        <div class="weatherdetails">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/563d07cb20.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
