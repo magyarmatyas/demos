@@ -16,7 +16,7 @@ input.value = '';
 const searchWeather = () => {
 
     const APIKey =  'e46be40a54b748fa932203304232509';
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${input.value}&aqi=no`).then(response => response.json()).then(json => {
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${input.value}&aqi=no`).then(response => response.json()).then(json => {
 
 
 
