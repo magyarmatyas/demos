@@ -6,7 +6,8 @@ const img = document.querySelector(".image");
 const description = document.querySelector(".description");
 const temp = document.querySelector(".temperature");
 const humidity = document.querySelectorAll(".text")[0].querySelector("span");
-const wind = document.querySelectorAll(".text")[1].querySelector("span");
+const rain = document.querySelectorAll(".text")[1].querySelector("span");
+const wind = document.querySelectorAll(".text")[2].querySelector("span");
 const weatherbox = document.querySelector(".weatherbox");
 const weatherdetails = document.querySelector(".weatherdetails");
 const error = document.querySelector(".error");
@@ -122,7 +123,12 @@ const searchWeather = () => {
             description.innerHTML = json.current.condition.text;
             break;
         }
-    }})
+    }});
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${input.value}&days=1&aqi=no&alerts=no`).then(response => response.json()).then(json => {
+
+    rain.innerHTML = `${json.forecast.forecastday[0].day.daily_chance_of_rain}%`;
+
+    });
 };
 
 searchBtn.addEventListener("click", searchWeather);
