@@ -33,7 +33,7 @@ const searchWeather = () => {
     if(input.value !== "") {
         error.style.display = "none";
         json.current.is_day ? appBody.style = "background-image: linear-gradient(to left top, #003182, #275ba4, #4e86c4, #7bb2e2, #aedeff)" : appBody.style = "background-image: linear-gradient(to left top, #1b283b, #26334c, #323e5d, #404a6f, #4f5581)";
-        json.current.is-day ? isDay = "day" : isDay = "night";
+        json.current.is_day ? isDay = "day" : isDay = "night";
         document.querySelector(".weatherbox").style.display = "block";
         document.querySelector(".weatherdetails").style.display = "flex";
         appBody.style.height = "600px";
