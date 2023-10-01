@@ -125,8 +125,9 @@ input[type='text']::placeholder {
 }
 
 .image {
-    width: 50%;
+    width: 60%;
     margin-bottom: 0;
+    padding-bottom: 20px;
 }
 
 .description {
