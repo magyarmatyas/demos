@@ -124,7 +124,7 @@ const searchWeather = () => {
             break;
         }
     }});
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${input.value}&days=1&aqi=no&alerts=no`).then(response => response.json()).then(json => {
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${input.value}&days=1&aqi=no&alerts=no`).then(response => response.json()).then(json => {
 
     rain.innerHTML = `${json.forecast.forecastday[0].day.daily_chance_of_rain}%`;
 
