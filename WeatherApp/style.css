@@ -221,3 +221,22 @@ input[type='text']::placeholder {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+
+@media only screen and (max-width: 600px) {
+    .text p {
+        font-size: 14px;
+        padding-left: 8px;
+        margin-top: 0;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+    
+    .text span {
+        font-size: 14px;
+        padding-left: 8px;
+        font-weight: 800;
+    }
+    .weatherdetails i {
+        font-size: 33px;
+    }
+  }
