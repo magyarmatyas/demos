@@ -15,6 +15,8 @@ input.value = '';
 
 const searchWeather = () => {
 
+    let isDay = "";
+
     const APIKey =  'e46be40a54b748fa932203304232509';
     fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${input.value}&aqi=no`).then(response => response.json()).then(json => {
 
@@ -31,6 +33,7 @@ const searchWeather = () => {
     if(input.value !== "") {
         error.style.display = "none";
         json.current.is_day ? appBody.style = "background-image: linear-gradient(to left top, #003182, #275ba4, #4e86c4, #7bb2e2, #aedeff)" : appBody.style = "background-image: linear-gradient(to left top, #1b283b, #26334c, #323e5d, #404a6f, #4f5581)";
+        json.current.is-day ? isDay = "day" : isDay = "night";
         document.querySelector(".weatherbox").style.display = "block";
         document.querySelector(".weatherdetails").style.display = "flex";
         appBody.style.height = "600px";
@@ -44,20 +47,20 @@ const searchWeather = () => {
 
     switch (json.current.condition.code) {
         case 1000:
-            img.src = "weather/clear.png";
-            description.innerHTML = "Clear";
+            img.src = `weather/clear-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1003:
         case 1006:
         case 1009:
-            img.src = "weather/cloudy.png";
-            description.innerHTML = "Cloudy";
+            img.src = `weather/cloudy-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1030:
         case 1135:
         case 1147:
-            img.src = "weather/fog.png";
-            description.innerHTML = "Fog";
+            img.src = `weather/fog-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1063:
         case 1180:
@@ -68,8 +71,8 @@ const searchWeather = () => {
         case 1195:
         case 1198:
         case 1201:
-            img.src = "weather/rain.png";
-            description.innerHTML = "Rain";
+            img.src = `weather/rain-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1204:
         case 1207:
@@ -89,8 +92,8 @@ const searchWeather = () => {
         case 1258:
         case 1279:
         case 1282:
-            img.src = "weather/snow.png";
-            description.innerHTML = "Snow";
+            img.src = `weather/snow-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1072:
         case 1087:
@@ -98,25 +101,25 @@ const searchWeather = () => {
         case 1153:
         case 1168:
         case 1171:
-            img.src = "weather/drizzle.png";
-            description.innerHTML = "Drizzle";
+            img.src = `weather/drizzle-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1237:
         case 1261:
         case 1264:
-            img.src = "weather/hail.png";
-            description.innerHTML = "Hail";
+            img.src = `weather/hail-${isDay}.png`;
+            description.innerHTML = json.current.condition.text;
             break;
         case 1240:
         case 1243:
         case 1246:
-            img.src = "weather/rainshower.png"
-            description.innerHTML = "Rainshower";
+            img.src = `weather/rainshower-${isDay}.png`
+            description.innerHTML = json.current.condition.text;
             break;
         case 1273:
         case 1276:
-            img.src = "weather/thunderstorm.png"
-            description.innerHTML = "Thunderstorm";
+            img.src = `weather/thunderstorm-${isDay}.png`
+            description.innerHTML = json.current.condition.text;
             break;
         }
     }})
