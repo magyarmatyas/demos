@@ -131,9 +131,11 @@ const searchWeather = () => {
     });
 };
 
+
 searchBtn.addEventListener("click", searchWeather);
 input.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       searchWeather();
+      input.blur();
     }
 });
