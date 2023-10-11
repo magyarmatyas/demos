@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magyar Mátyás</title>
     <link rel="stylesheet" href="../dist/output.css" />
-    <link rel="favicon" href="../favicon.ico" />
+    <link rel="favicon" href="../assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,11 +14,11 @@
     />
   </head>
   <body class="m-0 overflow-hidden bg-white p-0 dark:bg-slate-900">
+    <div id="particles-js" class="absolute -z-10 m-auto h-full w-full"></div>
     <div class="container m-auto">
       <!-- Landing page -->
 
       <!-- Logos -->
-
       <section
         id="landing-page"
         class="flex h-[calc(100dvh)] flex-col justify-between sm:h-screen"
@@ -68,13 +68,13 @@
 
         <div class="m-auto">
           <h1
-            class="lang-en text-center text-3xl leading-4 text-slate-900 dark:text-white sm:text-5xl sm:leading-snug"
+            class="lang-en text-center text-3xl leading-relaxed text-slate-900 dark:text-white sm:text-5xl sm:leading-relaxed"
           >
             Hi, I'm Mátyás. <br />
             I build and develop websites.
           </h1>
           <h1
-            class="lang-hu hidden text-center text-3xl text-slate-900 dark:text-white sm:text-5xl sm:leading-snug"
+            class="lang-hu hidden text-center text-3xl leading-relaxed text-slate-900 dark:text-white sm:text-5xl sm:leading-relaxed"
           >
             Hello, Mátyás vagyok. <br />
             Weboldalakat tervezek és készítek.
@@ -159,6 +159,7 @@
       <section id="contact" class="h-screen"></section>
     </div>
 
+    <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
     <script src="index.js"></script>
   </body>
 </html>

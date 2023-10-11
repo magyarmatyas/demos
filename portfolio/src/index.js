@@ -4,12 +4,16 @@ const landingPage = document.querySelector("#landing-page");
 const changeLangBtn = document.querySelector("#change-lang");
 const arrowDown = document.querySelector("#arrow-down");
 let userLang = navigator.language || navigator.userLanguage;
+const particles = document.querySelector("#particles-js");
 
 if (
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches
 ) {
   document.documentElement.classList.add("dark");
+  particlesJS.load("particles-js", `../assets/particles.json`);
+} else {
+  particlesJS.load("particles-js", "../assets/particles-light.json");
 }
 
 darkModeSwitch.addEventListener("click", () => {
@@ -25,6 +29,7 @@ arrowDown.addEventListener("click", () => {
   });
   setTimeout(() => {
     landingPage.classList.add("hidden");
+    particles.classList.add("hidden");
     main.scrollIntoView({ behavior: "smooth" });
   }, 800);
 });

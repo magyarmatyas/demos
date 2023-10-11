@@ -572,8 +572,20 @@ html {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .inset-0 {
   inset: 0px;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .m-0 {
@@ -629,6 +641,10 @@ html {
   height: 100vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -655,6 +671,14 @@ html {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-auto {
+  width: auto;
 }
 
 @keyframes bounce {
@@ -783,6 +807,18 @@ html {
   line-height: 1rem;
 }
 
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
@@ -879,5 +915,9 @@ body * {
 
   .sm\:leading-snug {
     line-height: 1.375;
+  }
+
+  .sm\:leading-relaxed {
+    line-height: 1.625;
   }
 }
