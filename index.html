@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magyar Mátyás</title>
-    <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="favicon" href="./favicon.ico" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="favicon" href="../assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,12 +35,12 @@
             >
               <img
                 class="block w-7 dark:hidden sm:w-8"
-                src="./assets/github-mark.svg"
+                src="../assets/github-mark.svg"
                 alt="github"
               />
               <img
                 class="hidden w-7 dark:block sm:w-8"
-                src="./assets/github-mark-white.svg"
+                src="../assets/github-mark-white.svg"
                 alt="github"
               />
             </a>
@@ -51,12 +51,12 @@
               class="pl-4"
             >
               <img
-                src="./assets/twitter-white.svg"
+                src="../assets/twitter-white.svg"
                 alt="twitter"
                 class="hidden w-7 dark:block sm:w-8"
               />
               <img
-                src="./assets/twitter.svg"
+                src="../assets/twitter.svg"
                 alt="twitter"
                 class="block w-7 dark:hidden sm:w-8"
               />
@@ -66,7 +66,7 @@
 
         <!-- Introduction -->
 
-        <div class="m-auto">
+        <div class="m-auto cursor-default select-none">
           <h1
             class="lang-en text-center text-3xl leading-relaxed text-slate-900 dark:text-white sm:text-5xl sm:leading-relaxed"
           >
@@ -86,12 +86,12 @@
         <div class="mx-auto">
           <button id="arrow-down" class="mx-auto">
             <img
-              src="./assets/arrow-down-white.png"
+              src="../assets/arrow-down-white.png"
               class="m-auto hidden w-12 animate-bounce cursor-pointer dark:block sm:w-16"
               alt="arrow down"
             />
             <img
-              src="./assets/arrow-down.png"
+              src="../assets/arrow-down.png"
               class="m-auto block w-12 animate-bounce cursor-pointer dark:hidden sm:w-16"
               alt="arrow down"
             />
@@ -99,33 +99,45 @@
         </div>
       </section>
 
-      <header></header>
+      <!-- Navigation -->
 
-      <!-- Main page -->
-
-      <section id="main" class="h-screen">
-        <!-- Navigation -->
-
+      <header class="sticky top-0 z-50" id="header">
         <nav
-          class="flex w-full items-center justify-between px-3 py-5 text-slate-900 dark:border-white dark:text-white sm:px-5"
+          class="flex w-full items-center justify-between border-b border-gray-300 bg-opacity-30 px-3 pb-5 text-slate-900 backdrop-blur-lg backdrop-filter dark:border-white dark:text-white sm:px-5"
         >
           <!-- Nav elements -->
 
           <ul
-            class="lang-en flex flex-row items-center space-x-4 text-lg outline-none sm:space-x-6 sm:text-2xl"
+            class="lang-en group flex flex-row items-center space-x-4 text-lg outline-none sm:space-x-6 sm:text-2xl"
           >
-            <li><a href="#main">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#main">home</a>
+            </li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#about">about</a>
+            </li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#projects">projects</a>
+            </li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#contact">contact</a>
+            </li>
           </ul>
           <ul
-            class="lang-hu hidden flex-row items-center space-x-4 text-lg outline-none sm:space-x-6 sm:text-2xl"
+            class="lang-hu hidden flex-row items-center space-x-4 text-lg outline-none transition-all duration-100 sm:space-x-6 sm:text-2xl"
           >
-            <li><a href="#main">főoldal</a></li>
-            <li><a href="#about">rólam</a></li>
-            <li><a href="#projects">projektek</a></li>
-            <li><a href="#contact">kapcsolat</a></li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#main">főoldal</a>
+            </li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#about">rólam</a>
+            </li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#projects">projektek</a>
+            </li>
+            <li class="pt-5 transition-all duration-150 hover:pt-3">
+              <a href="#contact">kapcsolat</a>
+            </li>
           </ul>
 
           <!-- Language and dark mode switch -->
@@ -133,25 +145,37 @@
           <div class="flex flex-row items-center space-x-2">
             <button
               id="change-lang"
-              class="cursor-pointer text-sm font-thin sm:text-lg"
+              class="cursor-pointer pt-5 text-sm font-thin transition-all duration-150 hover:pt-3 sm:text-lg"
             >
               hu
             </button>
 
             <button id="dark-mode-switch">
               <img
-                class="block w-6 cursor-pointer dark:hidden sm:w-8"
-                src="./assets/darkmode.png"
+                class="block w-6 cursor-pointer pt-5 transition-all duration-150 hover:-scale-x-100 dark:hidden sm:w-8"
+                src="../assets/darkmode.png"
                 alt="light mode"
               />
               <img
-                class="hidden w-6 cursor-pointer dark:block sm:w-8"
-                src="./assets/lightmode.png"
+                class="hidden w-6 transform cursor-pointer pt-5 transition-all duration-150 hover:-scale-x-100 dark:block sm:w-8"
+                src="../assets/lightmode.png"
                 alt="light mode"
               />
             </button>
           </div>
         </nav>
+      </header>
+
+      <!-- Main page -->
+
+      <section id="main" class="relative h-screen">
+        <div class="pt-20" id="introduction">
+          <img
+            src="../assets/profilephoto.jpg"
+            alt="profile photo"
+            class="m-auto ml-auto w-60 rounded-full border-4 border-slate-900 dark:border-white"
+          />
+        </div>
       </section>
 
       <section id="about" class="h-screen"></section>
@@ -159,7 +183,7 @@
       <section id="contact" class="h-screen"></section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="./src/index.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
+    <script src="index.js"></script>
   </body>
 </html>
