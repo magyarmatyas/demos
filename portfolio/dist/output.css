@@ -733,6 +733,11 @@ html {
   padding-bottom: 1.25rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -772,6 +777,10 @@ html {
 
 .font-thin {
   font-weight: 100;
+}
+
+.leading-4 {
+  line-height: 1rem;
 }
 
 .text-slate-900 {
@@ -850,5 +859,25 @@ body * {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:leading-4 {
+    line-height: 1rem;
+  }
+
+  .sm\:leading-10 {
+    line-height: 2.5rem;
+  }
+
+  .sm\:leading-normal {
+    line-height: 1.5;
+  }
+
+  .sm\:leading-tight {
+    line-height: 1.25;
+  }
+
+  .sm\:leading-snug {
+    line-height: 1.375;
   }
 }

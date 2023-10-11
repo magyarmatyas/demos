@@ -50,6 +50,6 @@ const changeLang = function () {
 
 changeLangBtn.addEventListener("click", changeLang);
 
-if (userLang === "hu-HU") {
+if (userLang === "hu-HU" || userLang === "hu") {
   changeLang();
 }
