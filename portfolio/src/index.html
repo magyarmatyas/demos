@@ -13,36 +13,99 @@
       rel="stylesheet"
     />
   </head>
-  <body class="m-0 bg-white p-0 dark:bg-slate-900">
+  <body class="m-0 overflow-hidden bg-white p-0 dark:bg-slate-900">
     <div class="container m-auto">
-      <section
-        id="landing-page"
-        class="flex h-screen flex-col items-center justify-center"
-      >
-        <h1
-          class="lang-en text-center text-3xl text-slate-900 dark:text-white sm:text-5xl"
-        >
-          Hi, I'm Mátyás. <br />
-          I build and develop websites.
-        </h1>
-        <h1
-          class="lang-hu hidden text-center text-3xl text-slate-900 dark:text-white sm:text-5xl"
-        >
-          Hello, Mátyás vagyok. <br />
-          Weboldalakat tervezek és készítek.
-        </h1>
-        <img
-          id="arrow-down"
-          src=""
-          class="absolute bottom-6 m-auto w-10 animate-bounce cursor-pointer sm:w-16"
-          alt="arrow down"
-        />
+      <!-- Landing page -->
+
+      <!-- Logos -->
+
+      <section id="landing-page" class="flex h-screen flex-col justify-between">
+        <div class="flex justify-between dark:text-white">
+          <h1 class="ml-4 mt-4 text-2xl">Magyar Mátyás</h1>
+          <div class="felx-row mr-4 mt-6 flex px-2">
+            <a
+              href="https://github.com/magyarmatyas"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="block w-8 dark:hidden"
+                src="../assets/github-mark.svg"
+                alt="github"
+              />
+              <img
+                class="hidden w-8 dark:block"
+                src="../assets/github-mark-white.svg"
+                alt="github"
+              />
+            </a>
+            <a
+              href="https://twitter.com/MagyarAMatyas"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="pl-4"
+            >
+              <img
+                src="../assets/twitter-white.svg"
+                alt="twitter"
+                class="hidden w-8 dark:block"
+              />
+              <img
+                src="../assets/twitter.svg"
+                alt="twitter"
+                class="block w-8 dark:hidden"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Introduction -->
+
+        <div class="m-auto">
+          <h1
+            class="lang-en text-center text-3xl text-slate-900 dark:text-white sm:text-5xl"
+          >
+            Hi, I'm Mátyás. <br />
+            I build and develop websites.
+          </h1>
+          <h1
+            class="lang-hu hidden text-center text-3xl text-slate-900 dark:text-white sm:text-5xl"
+          >
+            Hello, Mátyás vagyok. <br />
+            Weboldalakat tervezek és készítek.
+          </h1>
+        </div>
+
+        <!-- Arrow down -->
+
+        <div class="mx-auto">
+          <button id="arrow-down" class="mx-auto">
+            <img
+              src="../assets/arrow-down-white.png"
+              class="m-auto hidden w-10 animate-bounce cursor-pointer dark:block sm:w-16"
+              alt="arrow down"
+            />
+            <img
+              src="../assets/arrow-down.png"
+              class="m-auto block w-10 animate-bounce cursor-pointer dark:hidden sm:w-16"
+              alt="arrow down"
+            />
+          </button>
+        </div>
       </section>
+
       <header></header>
+
+      <!-- Main page -->
+
       <section id="main" class="h-screen">
+        <!-- Navigation -->
+
         <nav
           class="flex w-full items-center justify-between px-3 py-5 text-slate-900 dark:border-white dark:text-white sm:px-5"
         >
+          <!-- Nav elements -->
+
           <ul
             class="lang-en flex flex-row items-center space-x-4 text-lg outline-none sm:space-x-6 sm:text-2xl"
           >
@@ -59,22 +122,33 @@
             <li><a href="#projects">projektek</a></li>
             <li><a href="#contact">kapcsolat</a></li>
           </ul>
+
+          <!-- Language and dark mode switch -->
+
           <div class="flex flex-row items-center space-x-2">
-            <p
+            <button
               id="change-lang"
               class="cursor-pointer text-sm font-thin sm:text-lg"
             >
               hu
-            </p>
-            <img
-              id="dark-mode-switch"
-              class="w-6 cursor-pointer sm:w-8"
-              src=""
-              alt="light mode"
-            />
+            </button>
+
+            <button id="dark-mode-switch">
+              <img
+                class="block w-6 cursor-pointer dark:hidden sm:w-8"
+                src="../assets/darkmode.png"
+                alt="light mode"
+              />
+              <img
+                class="hidden w-6 cursor-pointer dark:block sm:w-8"
+                src="../assets/lightmode.png"
+                alt="light mode"
+              />
+            </button>
           </div>
         </nav>
       </section>
+
       <section id="about" class="h-screen"></section>
       <section id="projects" class="h-screen"></section>
       <section id="contact" class="h-screen"></section>

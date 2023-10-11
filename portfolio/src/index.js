@@ -1,8 +1,8 @@
 const darkModeSwitch = document.querySelector("#dark-mode-switch");
-const arrowDown = document.querySelector("#arrow-down");
 const main = document.querySelector("#main");
 const landingPage = document.querySelector("#landing-page");
 const changeLangBtn = document.querySelector("#change-lang");
+const arrowDown = document.querySelector("#arrow-down");
 let userLang = navigator.language || navigator.userLanguage;
 
 if (
@@ -12,21 +12,8 @@ if (
   document.documentElement.classList.add("dark");
 }
 
-if (document.documentElement.classList.contains("dark")) {
-  darkModeSwitch.src = "../assets/lightmode.png";
-  arrowDown.src = "../assets/arrow-down-light.png";
-} else {
-  darkModeSwitch.src = "../assets/darkmode.png";
-  arrowDown.src = "../assets/arrow-down-dark.png";
-}
-
 darkModeSwitch.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
-  document.documentElement.classList.contains("dark")
-    ? (darkModeSwitch.src = "../assets/lightmode.png") &&
-      (arrowDown.src = "../assets/arrow-down-light.png")
-    : (darkModeSwitch.src = "../assets/darkmode.png") &&
-      (arrowDown.src = "../assets/arrow-down-dark.png");
 });
 
 arrowDown.addEventListener("click", () => {
@@ -56,7 +43,7 @@ const changeLang = function () {
     el.classList.toggle("hidden");
     el.classList.toggle("flex");
   });
-  changeLang.innerText === "en"
+  changeLangBtn.innerText === "en"
     ? (changeLangBtn.innerText = "hu")
     : (changeLangBtn.innerText = "en");
 };
