@@ -572,6 +572,10 @@ html {
   }
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -617,6 +621,10 @@ html {
   display: none;
 }
 
+.h-\[calc\(100dvh\)\] {
+  height: calc(100dvh);
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -635,6 +643,18 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 @keyframes bounce {
@@ -721,6 +741,10 @@ html {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -739,6 +763,11 @@ html {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-thin {
@@ -785,6 +814,10 @@ body * {
 }
 
 @media (min-width: 640px) {
+  .sm\:h-screen {
+    height: 100vh;
+  }
+
   .sm\:w-16 {
     width: 4rem;
   }

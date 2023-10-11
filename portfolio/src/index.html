@@ -19,22 +19,27 @@
 
       <!-- Logos -->
 
-      <section id="landing-page" class="flex h-screen flex-col justify-between">
-        <div class="flex justify-between dark:text-white">
-          <h1 class="ml-4 mt-4 text-2xl">Magyar Mátyás</h1>
-          <div class="felx-row mr-4 mt-6 flex px-2">
+      <section
+        id="landing-page"
+        class="flex h-[calc(100dvh)] flex-col justify-between sm:h-screen"
+      >
+        <div class="flex items-center justify-between dark:text-white">
+          <div>
+            <h1 class="ml-4 mt-6 text-2xl">Magyar Mátyás</h1>
+          </div>
+          <div class="mr-4 mt-6 flex flex-row items-center px-2">
             <a
               href="https://github.com/magyarmatyas"
               target="_blank"
               rel="noreferrer noopener"
             >
               <img
-                class="block w-8 dark:hidden"
+                class="block w-7 dark:hidden sm:w-8"
                 src="../assets/github-mark.svg"
                 alt="github"
               />
               <img
-                class="hidden w-8 dark:block"
+                class="hidden w-7 dark:block sm:w-8"
                 src="../assets/github-mark-white.svg"
                 alt="github"
               />
@@ -48,12 +53,12 @@
               <img
                 src="../assets/twitter-white.svg"
                 alt="twitter"
-                class="hidden w-8 dark:block"
+                class="hidden w-7 dark:block sm:w-8"
               />
               <img
                 src="../assets/twitter.svg"
                 alt="twitter"
-                class="block w-8 dark:hidden"
+                class="block w-7 dark:hidden sm:w-8"
               />
             </a>
           </div>
@@ -82,12 +87,12 @@
           <button id="arrow-down" class="mx-auto">
             <img
               src="../assets/arrow-down-white.png"
-              class="m-auto hidden w-10 animate-bounce cursor-pointer dark:block sm:w-16"
+              class="m-auto hidden w-12 animate-bounce cursor-pointer dark:block sm:w-16"
               alt="arrow down"
             />
             <img
               src="../assets/arrow-down.png"
-              class="m-auto block w-10 animate-bounce cursor-pointer dark:hidden sm:w-16"
+              class="m-auto block w-12 animate-bounce cursor-pointer dark:hidden sm:w-16"
               alt="arrow down"
             />
           </button>
