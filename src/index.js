@@ -6,6 +6,7 @@ const arrowDown = document.querySelector("#arrow-down");
 let userLang = navigator.language || navigator.userLanguage;
 const particles = document.querySelector("#particles-js");
 const navbar = document.querySelector("#header");
+const flipImage = document.querySelector("#flip-image");
 
 if (
   window.matchMedia &&
@@ -62,3 +63,23 @@ changeLangBtn.addEventListener("click", changeLang);
 if (userLang === "hu-HU" || userLang === "hu") {
   changeLang();
 }
+
+flipImage.addEventListener("click", () => {
+  document.querySelector("#profile-photo").classList.remove("hidden");
+  document.querySelector("#intro-eng").classList.add("hidden");
+  document.querySelector("#intro-hun").classList.add("hidden");
+  document.querySelector("#profile-photo").classList.add("absolute");
+  document.querySelector("#profile-photo").classList.add("inset-0");
+  document
+    .querySelector("#profile-photo")
+    .classList.add("[transform:rotateY(180deg)]");
+  document
+    .querySelector("#profile-photo")
+    .classList.add("[backface-visibility:hidden]");
+  document
+    .querySelector("#introduction")
+    .classList.add("[transform-style:preserve-3d]");
+  document
+    .querySelector("#introduction")
+    .classList.add("[transform:rotateY(180deg)]");
+});
