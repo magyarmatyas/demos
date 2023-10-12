@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="m-0 overflow-hidden bg-white p-0 dark:bg-slate-900">
+  <body class="m-0 bg-white p-0 dark:bg-slate-900 overflow-hidden">
     <div id="particles-js" class="absolute -z-10 m-auto h-full w-full"></div>
     <div class="container m-auto">
       <!-- Landing page -->
@@ -21,7 +21,7 @@
       <!-- Logos -->
       <section
         id="landing-page"
-        class="flex h-[calc(100dvh)] flex-col justify-between sm:h-screen"
+        class="flex h-[calc(100dvh)] flex-col justify-between md:h-screen"
       >
         <div class="flex items-center justify-between dark:text-white">
           <div>
@@ -87,12 +87,12 @@
           <button id="arrow-down" class="mx-auto">
             <img
               src="./assets/arrow-down-white.png"
-              class="m-auto hidden w-12 animate-bounce cursor-pointer dark:block sm:w-16"
+              class="md:m-auto hidden w-12 animate-bounce cursor-pointer dark:block md:w-16 mx-auto pb-6"
               alt="arrow down"
             />
             <img
               src="./assets/arrow-down.png"
-              class="m-auto block w-12 animate-bounce cursor-pointer dark:hidden sm:w-16"
+              class="md:m-auto block w-12 animate-bounce cursor-pointer dark:hidden md:w-16 "
               alt="arrow down"
             />
           </button>
@@ -103,12 +103,12 @@
 
       <header class="relative top-0 z-50" id="header">
         <nav
-          class="flex w-full items-center justify-between border-b border-gray-300 bg-opacity-30 px-3 pb-5 text-slate-900 backdrop-blur-lg backdrop-filter dark:border-white dark:text-white sm:px-5"
+          class="flex w-full relative items-center justify-between border-b border-gray-300 bg-opacity-30 px-3 pb-5 text-slate-900 backdrop-blur-lg backdrop-filter dark:border-white dark:text-white sm:px-5"
         >
           <!-- Nav elements -->
 
           <ul
-            class="navbar-ul lang-en group flex flex-row items-center space-x-4 text-lg outline-none sm:space-x-6 sm:text-2xl"
+            class="navbar-ul lang-en group flex flex-row items-center space-x-4 text-lg outline-none md:space-x-6 md:text-2xl"
           >
             <li
               class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
@@ -118,7 +118,7 @@
             <li
               class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#about">my skills</a>
+              <a href="#skills">my skills</a>
             </li>
             <li
               class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
@@ -132,7 +132,7 @@
             </li>
           </ul>
           <ul
-            class="navbar-ul lang-hu hidden flex-row items-center space-x-4 text-lg outline-none transition-all duration-100 sm:space-x-6 sm:text-2xl"
+            class="navbar-ul lang-hu hidden flex-row items-center space-x-4 text-lg outline-none transition-all duration-100 md:space-x-6 md:text-2xl"
           >
             <li
               class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
@@ -142,7 +142,7 @@
             <li
               class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#about">skilljeim</a>
+              <a href="#skills">skilljeim</a>
             </li>
             <li
               class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
@@ -186,10 +186,10 @@
 
       <section id="about" class="relative scroll-mt-20">
         <div
-          class="absolute inset-x-0 z-0 h-1/6 max-w-lg bg-gradient-to-tr from-indigo-400 via-teal-900 to-[#C084FC] blur-[118px] sm:mt-28 lg:mt-40 lg:h-2/6"
+          class="absolute hidden sm:block inset-x-0 z-0 sm:h-2/6 md:h-1/6 max-w-lg bg-gradient-to-tr from-indigo-400 via-teal-900 to-[#C084FC] blur-2xl sm:mt-28 lg:mt-40 lg:h-2/6"
         ></div>
         <div
-          class="absolute inset-x-0 z-0 ml-auto h-1/6 max-w-lg bg-gradient-to-tr from-purple-600 via-pink-400 to-red-400 blur-[118px] sm:mt-56 lg:mt-96 lg:h-2/6"
+          class="absolute hidden sm:block inset-x-0 z-0 -rotate-45 ml-auto h-1/6 max-w-lg bg-gradient-to-tr from-purple-600 via-pink-400 to-red-400 blur-3xl mt-56 lg:h-2/6"
         ></div>
         <!-- Introduction -->
 
@@ -273,7 +273,96 @@
           </div>
         </div>
       </section>
-      <section id="skills" class="hidden h-screen scroll-mt-20"></section>
+      <section id="skills" class="relative h-[calc(100dvh)] scroll-mt-20">
+
+
+        <div
+          class="absolute hidden sm:block right-0 top-24 z-0 h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 mt-52"
+        ></div>
+        <div
+          class="absolute hidden sm:block left-12 z-0 h-1/4 w-1/3 rotate-45 rounded-full bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 blur-[118px] duration-500 mt-52"
+        ></div>
+
+
+        <div
+        class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
+        id="introduction"
+      >
+        <!-- Introduction English -->
+
+        <div
+          class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-t-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] sm:rounded-md md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
+        >
+          <!-- Header English -->
+
+          <h1
+            class="my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+          >
+            About me
+          </h1>
+
+          <!-- Text English -->
+
+          <p
+            class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+          >
+            I'm 20 years old living in Budapest. I'm a third grade student of
+            Psychology BA at ELTE PPK. I started learning web development as a
+            hobby, but it quickly became my passion. I'm currently working on
+            my first big project, a website for a local business.
+          </p>
+          <p
+            class="mb-5 mr-5 pl-5 text-justify indent-4 leading-snug sm:mb-5 sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+          >
+            Besides my university studies I like to go on trips and concerts.
+            I'm also interested in photography and music. I enjoy drinking tea
+            and I have a beautiful black cat.
+          </p>
+        </div>
+
+        <!-- Introduction Hungarian -->
+
+        <div
+          class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-t-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] sm:rounded-md md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
+        >
+          <!-- Header Hungarian -->
+
+          <h1
+            class="my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+          >
+            Rólam
+          </h1>
+
+          <!-- Text Hungarian -->
+
+          <p
+            class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+          >
+            Húsz éves vagyok és Budapesten élek. Az ELTE PPK harmadéves
+            pszichológia BA hallgatója vagyok. Hobbiként kezdtem foglalkozni a
+            webfejlesztéssel, de hamar szenvedélyemmé vált. Jelenleg első nagy
+            projektemen dolgozom, egy vállalkozás weboldalán. &nbsp;
+          </p>
+          <p
+            class="mb-5 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+          >
+            &nbsp; Egyetemi tanulmányaim mellett szívesen kirándulok és járok
+            koncertekre. Emellett érdekel a fényképészet és a zene.
+            Előszeretettel fogyasztok különböző teákat és van egy gyönyörű
+            fekete macskám.
+          </p>
+        </div>
+
+        <!-- Profile photo -->
+
+        <div class="z-10">
+          <img
+            src="./assets/profilephoto.jpg"
+            alt="profile photo"
+            class="m-auto ml-auto w-11/12 rounded-b-md shadow-2xl dark:shadow-lg dark:shadow-black sm:h-40 sm:w-auto sm:rounded-md md:h-60 lg:h-72"
+          />
+        </div>
+      </section>
       <section id="projects" class="hidden h-screen scroll-mt-20"></section>
       <section id="contact" class="hidden h-screen scroll-mt-20"></section>
     </div>
