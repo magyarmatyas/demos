@@ -5,6 +5,7 @@ const changeLangBtn = document.querySelector("#change-lang");
 const arrowDown = document.querySelector("#arrow-down");
 let userLang = navigator.language || navigator.userLanguage;
 const particles = document.querySelector("#particles-js");
+const navbar = document.querySelector("#header");
 
 if (
   window.matchMedia &&
@@ -22,16 +23,19 @@ darkModeSwitch.addEventListener("click", () => {
 
 arrowDown.addEventListener("click", () => {
   document.body.classList.remove("overflow-hidden");
-  main.scrollIntoView({
+  navbar.scrollIntoView({
     behavior: "smooth",
-    block: "nearest",
-    inline: "start",
   });
+
   setTimeout(() => {
     landingPage.classList.add("hidden");
     particles.classList.add("hidden");
-    main.scrollIntoView({ behavior: "smooth" });
+    navbar.scrollIntoView({ behavior: "smooth" });
   }, 800);
+  setTimeout(() => {
+    navbar.classList.remove("relative");
+    navbar.classList.add("sticky");
+  }, 801);
 });
 
 window.onbeforeunload = function () {

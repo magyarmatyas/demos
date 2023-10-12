@@ -101,7 +101,7 @@
 
       <!-- Navigation -->
 
-      <header class="sticky top-0 z-50" id="header">
+      <header class="relative top-0 z-50" id="header">
         <nav
           class="flex w-full items-center justify-between border-b border-gray-300 bg-opacity-30 px-3 pb-5 text-slate-900 backdrop-blur-lg backdrop-filter dark:border-white dark:text-white sm:px-5"
         >
@@ -110,32 +110,48 @@
           <ul
             class="lang-en group flex flex-row items-center space-x-4 text-lg outline-none sm:space-x-6 sm:text-2xl"
           >
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#main">home</a>
             </li>
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#about">about</a>
             </li>
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#projects">projects</a>
             </li>
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#contact">contact</a>
             </li>
           </ul>
           <ul
             class="lang-hu hidden flex-row items-center space-x-4 text-lg outline-none transition-all duration-100 sm:space-x-6 sm:text-2xl"
           >
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#main">főoldal</a>
             </li>
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#about">rólam</a>
             </li>
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#projects">projektek</a>
             </li>
-            <li class="pt-5 transition-all duration-150 hover:pt-3">
+            <li
+              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+            >
               <a href="#contact">kapcsolat</a>
             </li>
           </ul>
@@ -169,12 +185,74 @@
       <!-- Main page -->
 
       <section id="main" class="relative h-screen">
-        <div class="pt-20" id="introduction">
-          <img
-            src="./assets/profilephoto.jpg"
-            alt="profile photo"
-            class="m-auto ml-auto w-60 rounded-full border-4 border-slate-900 dark:border-white"
-          />
+        <div
+          class="flex flex-row items-center justify-center pt-10 sm:mx-5 sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
+          id="introduction"
+        >
+          <div
+            class="lang-en flex w-96 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
+          >
+            <h1
+              class="my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+            >
+              About me
+            </h1>
+            <p
+              class="mb-1 mr-9 pl-9 text-justify indent-4 leading-snug sm:text-xs md:text-sm lg:text-base"
+            >
+              I'm 20 years old living in Budapest. I'm a third grade student of
+              Psychology BSc at ELTE PPK. I started learning web development as
+              a hobby, but it quickly became my passion. I'm currently working
+              on my first big project, a website for a local business.
+            </p>
+            <p
+              class="mb-3 mr-9 pl-9 text-justify indent-4 leading-snug sm:text-xs md:text-sm lg:text-base"
+            >
+              Besides my university studies I like to go on trips and concerts.
+              I'm also interested in photography and music. I enjoy drinking tea
+              and I have a beautiful black cat.
+            </p>
+          </div>
+          <div
+            class="lang-hu hidden w-96 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
+          >
+            <h1
+              class="my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+            >
+              Rólam
+            </h1>
+            <p
+              class="mb-1 mr-9 pl-9 text-justify indent-4 leading-snug sm:text-xs md:text-sm lg:text-base"
+            >
+              Húsz éves vagyok és Budapesten élek. Az ELTE PPK harmadéves
+              pszichológia BA hallgatója vagyok. Hobbiként kezdtem foglalkozni a
+              webfejlesztéssel, de hamar a szenvedélyemmé vált. Jelenleg az első
+              nagy projektemen dolgozom, egy helyi vállalkozás weboldalán.
+              &nbsp;
+            </p>
+            <p
+              class="mb-3 mr-9 pl-9 text-justify indent-4 leading-snug sm:text-xs md:text-sm lg:text-base"
+            >
+              &nbsp; Egyetemi tanulmányaim mellett szívesen kirándulok és járok
+              koncertekre. Emellett érdekel a fényképészet és a zene.
+              Előszeretettel fogyasztok különböző teákat és van egy gyönyörű
+              fekete macskám.
+            </p>
+            <!-- <div>
+              <img
+                src="../assets/profilephoto.jpg"
+                alt="profile photo"
+                class="relative m-auto ml-auto h-32 self-end rounded-md shadow-2xl dark:shadow-lg dark:shadow-black sm:hidden"
+              />
+            </div> -->
+          </div>
+          <div>
+            <img
+              src="./assets/profilephoto.jpg"
+              alt="profile photo"
+              class="m-auto ml-auto hidden rounded-md shadow-2xl dark:shadow-lg dark:shadow-black sm:block sm:h-40 md:h-60 lg:h-72"
+            />
+          </div>
         </div>
       </section>
 
@@ -183,7 +261,7 @@
       <section id="contact" class="h-screen"></section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="./src/index.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
+    <script src="index.js"></script>
   </body>
 </html>
