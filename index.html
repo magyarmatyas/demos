@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="m-0 overflow-hidden bg-white p-0 dark:bg-slate-900">
+  <body class="m-0 bg-white p-0 dark:bg-slate-900">
     <div id="particles-js" class="absolute -z-10 m-auto h-full w-full"></div>
     <div class="container m-auto">
       <!-- Landing page -->
@@ -161,19 +161,19 @@
           <div class="flex flex-row items-center space-x-2">
             <button
               id="change-lang"
-              class="cursor-pointer pt-5 text-sm font-thin transition-all duration-150 hover:pt-3 sm:text-lg"
+              class="cursor-pointer pt-5 text-sm font-thin transition-all duration-150 hover:pt-3 md:text-lg"
             >
               hu
             </button>
 
             <button id="dark-mode-switch">
               <img
-                class="block w-6 cursor-pointer pt-5 transition-all duration-150 hover:-scale-x-100 dark:hidden sm:w-8"
+                class="block w-6 cursor-pointer pt-5 transition-all duration-150 hover:-scale-x-100 dark:hidden md:w-8"
                 src="./assets/darkmode.png"
                 alt="light mode"
               />
               <img
-                class="hidden w-6 transform cursor-pointer pt-5 transition-all duration-150 hover:-scale-x-100 dark:block sm:w-8"
+                class="hidden w-6 transform cursor-pointer pt-5 transition-all duration-150 hover:-scale-x-100 dark:block md:w-8"
                 src="./assets/lightmode.png"
                 alt="light mode"
               />
@@ -186,10 +186,10 @@
 
       <section id="about" class="relative scroll-mt-16">
         <div
-          class="absolute inset-x-0 z-0 hidden max-w-lg bg-gradient-to-tr from-indigo-400 via-teal-900 to-[#C084FC] blur-2xl sm:mt-28 sm:block sm:h-2/6 md:h-1/6 lg:mt-40 lg:h-2/6"
+          class="absolute inset-x-0 z-0 hidden max-w-lg bg-gradient-to-tr from-indigo-400 via-teal-900 to-[#C084FC] blur-[118px] sm:mt-28 sm:block sm:h-2/6 md:h-1/6 lg:mt-40 lg:h-2/6"
         ></div>
         <div
-          class="absolute inset-x-0 z-0 ml-auto mt-56 hidden h-1/6 max-w-lg -rotate-45 bg-gradient-to-tr from-purple-600 via-pink-400 to-red-400 blur-3xl sm:block lg:h-2/6"
+          class="absolute inset-x-0 z-0 ml-auto mt-56 hidden h-1/6 max-w-lg -rotate-45 bg-gradient-to-tr from-purple-600 via-pink-400 to-red-400 blur-[118px] sm:block lg:h-2/6"
         ></div>
         <!-- Introduction -->
 
@@ -205,7 +205,7 @@
             <!-- Header English -->
 
             <h1
-              class="my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+              class="sm:text-md my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
             >
               About me
             </h1>
@@ -237,7 +237,7 @@
             <!-- Header Hungarian -->
 
             <h1
-              class="my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+              class="sm:text-md my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
             >
               Rólam
             </h1>
@@ -275,6 +275,151 @@
       </section>
       <section
         id="skills"
+        class="relative mt-20 h-[calc(100dvh)] scroll-mt-24 sm:mt-0 sm:scroll-mt-16"
+      >
+        <div
+          class="absolute right-0 top-24 z-0 mt-52 hidden h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 sm:block"
+        ></div>
+        <div
+          class="absolute left-12 z-0 mt-52 hidden h-1/4 w-1/3 rotate-45 rounded-full bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 blur-[118px] duration-500 sm:block"
+        ></div>
+
+        <div
+          class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
+          id="introduction"
+        >
+          <div
+            class="z-20 mb-10 mr-0 grid flex-1 grid-cols-3 grid-rows-2 gap-x-12 gap-y-12 text-slate-900 dark:text-white sm:mb-0 sm:mr-5 sm:gap-x-0 sm:gap-y-7 md:gap-x-0 md:gap-y-8 lg:mr-0 lg:gap-x-0 lg:gap-y-20"
+          >
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
+                src="./assets/html.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                HTML5
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
+                src="./assets/css.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                CSS3
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
+                src="./assets/javascript.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                JavaScript
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 py-4 drop-shadow-lg sm:w-10 sm:py-3 md:w-16 md:py-4 lg:w-16 lg:py-4"
+                src="./assets/tailwind.svg"
+              />
+              <p class="text-center text-lg sm:text-base md:text-lg">
+                Tailwind CSS
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
+                src="./assets/git.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                Git
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="hidden w-16 drop-shadow-lg dark:block sm:w-10 md:w-16 lg:w-16"
+                src="./assets/github-mark-white.svg"
+              />
+              <img
+                class="block w-16 drop-shadow-lg dark:hidden sm:w-10 md:w-16 lg:w-16"
+                src="./assets/github-mark.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                GitHub
+              </p>
+            </div>
+          </div>
+          <!-- Introduction English -->
+
+          <div
+            class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-52 sm:w-[360px] md:h-64 md:w-[450px] lg:h-80 lg:w-[500px]"
+          >
+            <!-- Header English -->
+
+            <h1
+              class="sm:text-md my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+            >
+              My skills
+            </h1>
+
+            <!-- Text English -->
+
+            <p
+              class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            >
+              My main focus is on front-end development. I'm familiar with
+              HTML5, CSS3 and JavaScript. I'm also learning React and Next.js.
+              I'm using Tailwind CSS for styling and Git for version control.
+              I'm also familiar with GitHub and GitHub Pages.
+            </p>
+            <p
+              class="mb-5 mr-5 pl-5 text-justify indent-4 leading-snug sm:mb-5 sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            >
+              In the future I would like to learn more about back-end and full
+              stack development. I'm also interested in UI/UX design. I'm
+              currently learning Figma. I'm also interested in learning
+              TypeScript and Python, but I'm not sure when I will start learning
+              them.
+            </p>
+          </div>
+
+          <!-- Introduction Hungarian -->
+
+          <div
+            class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-52 sm:w-[360px] md:h-64 md:w-[450px] lg:h-80 lg:w-[500px]"
+          >
+            <!-- Header Hungarian -->
+
+            <h1
+              class="sm:text-md my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
+            >
+              Skilljeim
+            </h1>
+
+            <!-- Text Hungarian -->
+
+            <p
+              class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            >
+              Jelenleg elsősorban a front-end fejlesztésre koncentrálok. Ismerem
+              és magabiztosan használom a HTML5, CSS3 és JavaScript nyelveket.
+              Emellett Reactet és Next.js-t tanulok. A stílusokhoz Tailwind
+              CSS-t használok, a verziókezeléshez pedig Gitet, illetve GitHubot.
+            </p>
+            <p
+              class="mb-5 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            >
+              A jövőben szeretnék többet foglalkozni a back-end és a full stack
+              fejlesztéssel. Érdekel a UI/UX design is, jelenleg a Figma
+              használatát tanulom. Érdekel a TypeScript és a Python is, de még
+              nem tudom, mikor fogom elkezdeni tanulni őket.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="projects"
         class="relative mt-20 h-[calc(100dvh)] scroll-mt-16 sm:mt-0"
       >
         <div
@@ -353,7 +498,7 @@
           <!-- Introduction English -->
 
           <div
-            class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[350px] md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
+            class="lang-en h-70 z-10 mt-20 flex w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:mt-0 sm:h-40 sm:w-[350px] md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
           >
             <!-- Header English -->
             <p
@@ -369,7 +514,7 @@
           <!-- Introduction Hungarian -->
 
           <div
-            class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[350px] md:mt-0 md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
+            class="lang-hu h-70 z-10 mt-20 hidden w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:mt-0 sm:h-40 sm:w-[350px] md:mt-0 md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
           >
             <!-- Header Hungarian -->
             <p
@@ -385,7 +530,6 @@
           <!-- Profile photo -->
         </div>
       </section>
-      <section id="projects" class="hidden h-screen scroll-mt-20"></section>
       <section id="contact" class="hidden h-screen scroll-mt-20"></section>
     </div>
 
