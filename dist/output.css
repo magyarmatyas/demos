@@ -816,6 +816,10 @@ html {
   scroll-margin-top: 5rem;
 }
 
+.scroll-mt-16 {
+  scroll-margin-top: 4rem;
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
