@@ -6,14 +6,17 @@ const arrowDown = document.querySelector("#arrow-down");
 let userLang = navigator.language || navigator.userLanguage;
 const particles = document.querySelector("#particles-js");
 const navbar = document.querySelector("#header");
+const faviconEl = document.querySelector('link[rel="icon"]');
 
 if (
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches
 ) {
   document.documentElement.classList.add("dark");
+  faviconEl.setAttribute("href", "../assets/favicon-dark.ico");
   particlesJS.load("particles-js", `../assets/particles.json`);
 } else {
+  faviconEl.setAttribute("href", "../assets/favicon-light.ico");
   particlesJS.load("particles-js", "../assets/particles-light.json");
 }
 
