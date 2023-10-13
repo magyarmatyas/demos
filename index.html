@@ -13,9 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body
-    class="m-0 min-h-[900px] overflow-hidden bg-white p-0 dark:bg-slate-900"
-  >
+  <body class="m-0 overflow-hidden bg-white p-0 dark:bg-slate-900">
     <div id="particles-js" class="absolute -z-10 m-auto h-full w-full"></div>
     <div class="container m-auto min-h-screen">
       <!-- Landing page --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -23,7 +21,7 @@
       <!-- Logos -->
       <section
         id="landing-page"
-        class="flex h-[calc(100dvh)] flex-col justify-between md:h-screen"
+        class="inset-0 flex h-[calc(100dvh)] flex-col justify-between md:h-screen"
       >
         <div class="flex items-center justify-between dark:text-white">
           <div>
@@ -114,24 +112,28 @@
             class="navbar-ul lang-en group flex flex-row items-center space-x-4 text-lg outline-none md:space-x-6 md:text-2xl"
           >
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="about-btn"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#about">about</a>
+              about
             </li>
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="skills-btn"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#skills">my skills</a>
+              my skills
             </li>
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="projects-btn"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#projects">projects</a>
+              projects
             </li>
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="contact-btn"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#contact">contact</a>
+              contact
             </li>
           </ul>
 
@@ -141,24 +143,28 @@
             class="navbar-ul lang-hu hidden flex-row items-center space-x-4 text-lg outline-none transition-all duration-100 md:space-x-6 md:text-2xl"
           >
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="aboutBtn2"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#about">rólam</a>
+              rólam
             </li>
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="skillsBtn2"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#skills">skilljeim</a>
+              skilljeim
             </li>
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="projectsBtn2"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#projects">projektek</a>
+              projektek
             </li>
             <li
-              class="pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
+              id="contactBtn2"
+              class="cursor-pointer pt-5 transition-all duration-150 hover:pt-3 hover:drop-shadow-xl"
             >
-              <a href="#contact">kapcsolat</a>
+              kapcsolat
             </li>
           </ul>
 
@@ -451,7 +457,7 @@
 
       <section
         id="projects"
-        class="relative mt-20 select-none scroll-mt-16 sm:mt-0"
+        class="relative mb-5 mt-20 select-none scroll-mt-16 sm:mt-0"
       >
         <!-- Projects background -->
 
@@ -466,7 +472,7 @@
         <!-- Projects Body -->
 
         <div
-          class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:flex-wrap sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
+          class="z-10 flex h-auto flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:flex-wrap sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
           id="projects-div"
         >
           <!-- Project WeatherApp English -->
@@ -557,7 +563,7 @@
               class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
             >
               I'm currently working on this project. It's a website for a local
-              business. I'm using React and Next.js for the front-end and
+              business. I'm using React and Next.js for the front-end,
               Express.js for the back-end, and MongoDB for the database. The
               site will have a webshop and a blog, I'm using Tailwind CSS for
               styling.
@@ -627,7 +633,33 @@
 
       <!-- Contact -->
 
-      <section id="contact" class="hidden h-screen scroll-mt-20"></section>
+      <section
+        id="contact"
+        class="relative mb-5 mt-20 select-none scroll-mt-16 sm:mt-0"
+      >
+        <!-- Contact background -->
+
+        <!-- <div
+          class="absolute left-12 z-0 mt-52 hidden h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 sm:block"
+        ></div> -->
+
+        <div
+          class="absolute left-48 top-16 -z-10 mt-52 hidden h-1/4 w-2/3 -rotate-12 rounded-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 blur-[118px] duration-500 sm:block"
+        ></div>
+
+        <!-- Contact Body -->
+
+        <div
+          class="z-10 flex h-auto flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] md:mx-6 lg:mx-16 xl:mx-40"
+          id="projects-div"
+        >
+          <h1
+            class="sm:text-md pb-4 pt-5 text-center text-3xl font-semibold text-slate-900 dark:text-white md:text-xl lg:text-5xl"
+          >
+            Did I catch your attention?
+          </h1>
+        </div>
+      </section>
     </div>
 
     <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>

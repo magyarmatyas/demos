@@ -7,6 +7,7 @@ let userLang = navigator.language || navigator.userLanguage;
 const particles = document.querySelector("#particles-js");
 const navbar = document.querySelector("#header");
 const faviconEl = document.querySelector('link[rel="icon"]');
+const links = document.querySelector("#header").querySelectorAll("li");
 
 if (
   window.matchMedia &&
@@ -34,17 +35,21 @@ arrowDown.addEventListener("click", () => {
     landingPage.classList.add("hidden");
     particles.classList.add("hidden");
     navbar.scrollIntoView({ behavior: "smooth" });
-  }, 800);
+  }, 850);
   setTimeout(() => {
     navbar.classList.remove("relative");
     navbar.classList.add("sticky");
-  }, 801);
+  }, 851);
 });
 
-window.onbeforeunload = function () {
-  landingPage.classList.remove("hidden");
-  window.scrollTo(0, 0);
-};
+if (history.scrollRestoration) {
+  history.scrollRestoration = "manual";
+} else {
+  window.onbeforeunload = function () {
+    landingPage.classList.remove("hidden");
+    window.scrollTo(0, 0);
+  };
+}
 
 const changeLang = function () {
   document.querySelectorAll(".lang-en").forEach((el) => {
@@ -65,3 +70,13 @@ changeLangBtn.addEventListener("click", changeLang);
 if (userLang === "hu-HU" || userLang === "hu") {
   changeLang();
 }
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    let page = link.id.slice(0, -4);
+    console.log(page);
+    document
+      .querySelector(`#` + `${page}`)
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
