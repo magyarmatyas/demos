@@ -285,61 +285,101 @@
         ></div>
 
         <div
-          class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
+          class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
           id="introduction"
         >
           <div
-            class="z-20 grid flex-1 grid-cols-3 grid-rows-2 gap-x-12 gap-y-12 text-slate-900 dark:text-white sm:gap-x-0 sm:gap-y-20"
+            class="z-20 grid flex-1 grid-cols-3 grid-rows-2 gap-x-12 gap-y-12 text-slate-900 dark:text-white sm:gap-x-0 sm:gap-y-2 md:gap-x-0 md:gap-y-8 lg:gap-x-0 lg:gap-y-20"
           >
             <div class="flex flex-col items-center justify-center">
-              <img class="w-16 drop-shadow-lg" src="./assets/html.svg" />
-              <p class="mt-2 text-center text-lg">HTML5</p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img class="w-16 drop-shadow-lg" src="./assets/css.svg" />
-              <p class="mt-2 text-center text-lg">CSS3</p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img class="w-16 drop-shadow-lg" src="./assets/javascript.svg" />
-              <p class="mt-2 text-center text-lg">JavaScript</p>
+              <img
+                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
+                src="./assets/html.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                HTML5
+              </p>
             </div>
             <div class="flex flex-col items-center justify-center">
               <img
-                class="w-16 py-4 drop-shadow-lg"
+                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
+                src="./assets/css.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                CSS3
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
+                src="./assets/javascript.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                JavaScript
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="w-16 py-4 drop-shadow-lg sm:w-6 sm:py-[9px] md:w-16 md:py-3 lg:w-16 lg:py-4"
                 src="./assets/tailwind.svg"
               />
-              <p class="text-center text-lg">Tailwind CSS</p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img class="w-16 drop-shadow-lg" src="./assets/git.svg" />
-              <p class="mt-2 text-center text-lg">Git</p>
+              <p class="text-center text-lg sm:text-base md:text-lg">
+                Tailwind CSS
+              </p>
             </div>
             <div class="flex flex-col items-center justify-center">
               <img
-                class="hidden w-16 drop-shadow-lg dark:block"
+                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
+                src="./assets/git.svg"
+              />
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                Git
+              </p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="hidden w-16 drop-shadow-lg dark:block sm:w-6 md:w-16 lg:w-16"
                 src="./assets/github-mark-white.svg"
               />
               <img
-                class="block w-16 drop-shadow-lg dark:hidden"
+                class="block w-16 drop-shadow-lg dark:hidden sm:w-6 md:w-16 lg:w-16"
                 src="./assets/github-mark.svg"
               />
-              <p class="mt-2 text-center text-lg">GitHub</p>
+              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
+                GitHub
+              </p>
             </div>
           </div>
           <!-- Introduction English -->
 
           <div
-            class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-t-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] sm:rounded-md md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
+            class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[350px] md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
           >
             <!-- Header English -->
+            <p
+              class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            >
+              Húsz éves vagyok és Budapesten élek. Az ELTE PPK harmadéves
+              pszichológia BA hallgatója vagyok. Hobbiként kezdtem foglalkozni a
+              webfejlesztéssel, de hamar szenvedélyemmé vált. Jelenleg első nagy
+              projektemen dolgozom, egy vállalkozás weboldalán. &nbsp;
+            </p>
           </div>
 
           <!-- Introduction Hungarian -->
 
           <div
-            class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-t-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] sm:rounded-md md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
+            class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[350px] md:mt-0 md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
           >
             <!-- Header Hungarian -->
+            <p
+              class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            >
+              Húsz éves vagyok és Budapesten élek. Az ELTE PPK harmadéves
+              pszichológia BA hallgatója vagyok. Hobbiként kezdtem foglalkozni a
+              webfejlesztéssel, de hamar szenvedélyemmé vált. Jelenleg első nagy
+              projektemen dolgozom, egy vállalkozás weboldalán. &nbsp;
+            </p>
           </div>
 
           <!-- Profile photo -->
