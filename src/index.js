@@ -14,10 +14,10 @@ if (
   window.matchMedia("(prefers-color-scheme: dark)").matches
 ) {
   document.documentElement.classList.add("dark");
-  faviconEl.setAttribute("href", "../assets/favicon-dark.ico");
+  faviconEl.setAttribute("href", "../assets/favicon-light.ico");
   particlesJS.load("particles-js", `../assets/particles.json`);
 } else {
-  faviconEl.setAttribute("href", "../assets/favicon-light.ico");
+  faviconEl.setAttribute("href", "../assets/favicon-dark.ico");
   particlesJS.load("particles-js", "../assets/particles-light.json");
 }
 
