@@ -13,9 +13,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="m-0 overflow-hidden bg-white p-0 dark:bg-slate-900">
+  <body class="m-0 min-h-[900px] bg-white p-0 dark:bg-slate-900">
     <div id="particles-js" class="absolute -z-10 m-auto h-full w-full"></div>
-    <div class="container m-auto">
+    <div class="container m-auto min-h-screen">
       <!-- Landing page -->
 
       <!-- Logos -->
@@ -27,6 +27,7 @@
           <div>
             <h1 class="ml-4 mt-6 text-2xl">Magyar Mátyás</h1>
           </div>
+
           <div class="mr-4 mt-6 flex flex-row items-center px-2">
             <a
               href="https://github.com/magyarmatyas"
@@ -101,11 +102,11 @@
 
       <!-- Navigation -->
 
-      <header class="sticky top-0 z-50" id="header">
+      <header class="sticky top-0 z-50 select-none" id="header">
         <nav
           class="relative flex w-full items-center justify-between border-b border-gray-300 bg-opacity-30 px-3 pb-5 text-slate-900 backdrop-blur-lg backdrop-filter dark:border-white dark:text-white sm:px-5"
         >
-          <!-- Nav elements -->
+          <!-- Nav elements English -->
 
           <ul
             class="navbar-ul lang-en group flex flex-row items-center space-x-4 text-lg outline-none md:space-x-6 md:text-2xl"
@@ -131,6 +132,9 @@
               <a href="#contact">contact</a>
             </li>
           </ul>
+
+          <!-- Nav elements Hungarian -->
+
           <ul
             class="navbar-ul lang-hu hidden flex-row items-center space-x-4 text-lg outline-none transition-all duration-100 md:space-x-6 md:text-2xl"
           >
@@ -158,6 +162,8 @@
 
           <!-- Language and dark mode switch -->
 
+          <!-- Language -->
+
           <div class="flex flex-row items-center space-x-2">
             <button
               id="change-lang"
@@ -165,6 +171,8 @@
             >
               hu
             </button>
+
+            <!-- Dark mode switch -->
 
             <button id="dark-mode-switch">
               <img
@@ -184,7 +192,12 @@
 
       <!-- About page -->
 
-      <section id="about" class="relative scroll-mt-16">
+      <section
+        id="about"
+        class="relative mb-5 block cursor-default select-none scroll-mt-16 sm:min-h-[200px] md:min-h-[250px] lg:min-h-[300px]"
+      >
+        <!-- About background -->
+
         <div
           class="absolute inset-x-0 z-0 hidden max-w-lg bg-gradient-to-tr from-indigo-400 via-teal-900 to-[#C084FC] blur-[118px] sm:mt-28 sm:block sm:h-2/6 md:h-1/6 lg:mt-40 lg:h-2/6"
         ></div>
@@ -202,7 +215,7 @@
           <div
             class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-t-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] sm:rounded-md md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
           >
-            <!-- Header English -->
+            <!-- Introduction Header English -->
 
             <h1
               class="sm:text-md my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
@@ -210,7 +223,7 @@
               About me
             </h1>
 
-            <!-- Text English -->
+            <!-- Introduction Description English -->
 
             <p
               class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
@@ -234,7 +247,7 @@
           <div
             class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-t-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-40 sm:w-[420px] sm:rounded-md md:h-60 md:w-[450px] lg:h-72 lg:w-[500px]"
           >
-            <!-- Header Hungarian -->
+            <!-- Introduction Header Hungarian -->
 
             <h1
               class="sm:text-md my-4 text-center text-xl font-semibold sm:mb-1 sm:ml-9 sm:mt-2 sm:text-left md:mb-3 md:mt-6 md:text-xl lg:mb-5 lg:mt-8 lg:text-2xl"
@@ -242,7 +255,7 @@
               Rólam
             </h1>
 
-            <!-- Text Hungarian -->
+            <!-- Introduction Description Hungarian -->
 
             <p
               class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
@@ -273,23 +286,30 @@
           </div>
         </div>
       </section>
+
+      <!-- Skills -->
+
       <section
         id="skills"
-        class="relative mt-20 h-[calc(100dvh)] scroll-mt-24 sm:mt-0 sm:scroll-mt-16"
+        class="relative mb-5 mt-20 block scroll-mt-24 sm:mt-0 sm:min-h-[200px] sm:scroll-mt-16 md:min-h-[250px] lg:min-h-[300px]"
       >
+        <!-- Skills background -->
+
         <div
           class="absolute right-0 top-24 z-0 mt-52 hidden h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 sm:block"
         ></div>
         <div
-          class="absolute left-12 z-0 mt-52 hidden h-1/4 w-1/3 rotate-45 rounded-full bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 blur-[118px] duration-500 sm:block"
+          class="absolute left-40 z-0 mt-52 hidden h-1/4 w-1/3 rotate-[25deg] rounded-full bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 blur-[118px] duration-500 sm:block"
         ></div>
 
         <div
           class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
-          id="introduction"
+          id="skills-div"
         >
+          <!-- Skills logos -->
+
           <div
-            class="z-20 mb-10 mr-0 grid flex-1 grid-cols-3 grid-rows-2 gap-x-12 gap-y-12 text-slate-900 dark:text-white sm:mb-0 sm:mr-5 sm:gap-x-0 sm:gap-y-7 md:gap-x-0 md:gap-y-8 lg:mr-0 lg:gap-x-0 lg:gap-y-20"
+            class="z-20 mb-10 mr-0 grid flex-1 cursor-default select-none grid-cols-3 grid-rows-2 gap-x-12 gap-y-12 text-slate-900 dark:text-white sm:mb-0 sm:mr-5 sm:gap-x-0 sm:gap-y-7 md:gap-x-0 md:gap-y-8 lg:mr-0 lg:gap-x-0 lg:gap-y-20"
           >
             <div class="flex flex-col items-center justify-center">
               <img
@@ -300,6 +320,7 @@
                 HTML5
               </p>
             </div>
+
             <div class="flex flex-col items-center justify-center">
               <img
                 class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
@@ -309,6 +330,7 @@
                 CSS3
               </p>
             </div>
+
             <div class="flex flex-col items-center justify-center">
               <img
                 class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
@@ -318,6 +340,7 @@
                 JavaScript
               </p>
             </div>
+
             <div class="flex flex-col items-center justify-center">
               <img
                 class="w-16 py-4 drop-shadow-lg sm:w-10 sm:py-3 md:w-16 md:py-4 lg:w-16 lg:py-4"
@@ -327,6 +350,7 @@
                 Tailwind CSS
               </p>
             </div>
+
             <div class="flex flex-col items-center justify-center">
               <img
                 class="w-16 drop-shadow-lg sm:w-10 md:w-16 lg:w-16"
@@ -336,6 +360,7 @@
                 Git
               </p>
             </div>
+
             <div class="flex flex-col items-center justify-center">
               <img
                 class="hidden w-16 drop-shadow-lg dark:block sm:w-10 md:w-16 lg:w-16"
@@ -350,10 +375,11 @@
               </p>
             </div>
           </div>
-          <!-- Introduction English -->
+
+          <!-- Skills English -->
 
           <div
-            class="lang-en h-70 z-10 flex w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-52 sm:w-[360px] md:h-64 md:w-[450px] lg:h-80 lg:w-[500px]"
+            class="lang-en h-70 z-10 flex w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-52 sm:w-[360px] md:h-64 md:w-[450px] lg:h-80 lg:w-[500px]"
           >
             <!-- Header English -->
 
@@ -363,7 +389,7 @@
               My skills
             </h1>
 
-            <!-- Text English -->
+            <!-- Skills Description English -->
 
             <p
               class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
@@ -384,10 +410,10 @@
             </p>
           </div>
 
-          <!-- Introduction Hungarian -->
+          <!-- Skills Hungarian -->
 
           <div
-            class="lang-hu h-70 z-10 hidden w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-52 sm:w-[360px] md:h-64 md:w-[450px] lg:h-80 lg:w-[500px]"
+            class="lang-hu h-70 z-10 hidden w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-52 sm:w-[360px] md:h-64 md:w-[450px] lg:h-80 lg:w-[500px]"
           >
             <!-- Header Hungarian -->
 
@@ -397,7 +423,7 @@
               Skilljeim
             </h1>
 
-            <!-- Text Hungarian -->
+            <!-- Skills Description Hungarian -->
 
             <p
               class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
@@ -418,116 +444,153 @@
           </div>
         </div>
       </section>
+
+      <!-- Projects -->
+
       <section
         id="projects"
-        class="relative mt-20 h-[calc(100dvh)] scroll-mt-16 sm:mt-0"
+        class="relative mt-20 select-none scroll-mt-16 sm:mt-0"
       >
+        <!-- Projects background -->
+
+        <!-- <div
+          class="absolute left-12 z-0 mt-52 hidden h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 sm:block"
+        ></div> -->
+
         <div
-          class="absolute right-0 top-24 z-0 mt-52 hidden h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 sm:block"
-        ></div>
-        <div
-          class="absolute left-12 z-0 mt-52 hidden h-1/4 w-1/3 rotate-45 rounded-full bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 blur-[118px] duration-500 sm:block"
+          class="absolute left-48 top-16 -z-10 mt-52 hidden h-1/4 w-2/3 -rotate-12 rounded-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 blur-[118px] duration-500 sm:block"
         ></div>
 
         <div
-          class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
-          id="introduction"
+          class="z-10 flex flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] sm:flex-row sm:flex-wrap sm:items-center sm:justify-between md:mx-6 lg:mx-16 xl:mx-40"
+          id="projects-div"
         >
           <div
-            class="z-20 grid flex-1 grid-cols-3 grid-rows-2 gap-x-12 gap-y-12 text-slate-900 dark:text-white sm:gap-x-0 sm:gap-y-2 md:gap-x-0 md:gap-y-8 lg:gap-x-0 lg:gap-y-20"
+            class="lang-en z-10 mx-auto mb-4 h-auto w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-auto sm:w-5/12 md:h-auto md:w-5/12 lg:h-auto lg:w-96"
           >
-            <div class="flex flex-col items-center justify-center">
-              <img
-                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
-                src="./assets/html.svg"
-              />
-              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
-                HTML5
-              </p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img
-                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
-                src="./assets/css.svg"
-              />
-              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
-                CSS3
-              </p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img
-                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
-                src="./assets/javascript.svg"
-              />
-              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
-                JavaScript
-              </p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img
-                class="w-16 py-4 drop-shadow-lg sm:w-6 sm:py-[9px] md:w-16 md:py-3 lg:w-16 lg:py-4"
-                src="./assets/tailwind.svg"
-              />
-              <p class="text-center text-lg sm:text-base md:text-lg">
-                Tailwind CSS
-              </p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img
-                class="w-16 drop-shadow-lg sm:w-6 md:w-16 lg:w-16"
-                src="./assets/git.svg"
-              />
-              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
-                Git
-              </p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <img
-                class="hidden w-16 drop-shadow-lg dark:block sm:w-6 md:w-16 lg:w-16"
-                src="./assets/github-mark-white.svg"
-              />
-              <img
-                class="block w-16 drop-shadow-lg dark:hidden sm:w-6 md:w-16 lg:w-16"
-                src="./assets/github-mark.svg"
-              />
-              <p class="mt-2 text-center text-lg sm:text-base md:text-lg">
-                GitHub
-              </p>
-            </div>
-          </div>
-          <!-- Introduction English -->
-
-          <div
-            class="lang-en h-70 z-10 mt-20 flex w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:mt-0 sm:h-40 sm:w-[350px] md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
-          >
-            <!-- Header English -->
-            <p
-              class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            <h1
+              class="sm:text-md pb-4 pt-5 text-center text-xl font-semibold md:text-xl lg:text-2xl"
             >
-              Húsz éves vagyok és Budapesten élek. Az ELTE PPK harmadéves
-              pszichológia BA hallgatója vagyok. Hobbiként kezdtem foglalkozni a
-              webfejlesztéssel, de hamar szenvedélyemmé vált. Jelenleg első nagy
-              projektemen dolgozom, egy vállalkozás weboldalán. &nbsp;
+              WeatherApp
+            </h1>
+            <p
+              class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
+            >
+              I designed this web application as a project for my learning of
+              JavaScript. It uses the Weather API to display the current
+              weather, the temperature, humidity, speed of wind and the chance
+              of rain. Feel free to
+              <a href="https://magyarmatyas.me/miniprojects/WeatherApp/"
+                ><span class="text-purple-600 dark:text-red-600"
+                  >try it</span
+                ></a
+              >
+              and inspect it on
+              <a
+                href="https://github.com/magyarmatyas/magyarmatyas.github.io/tree/main/miniprojects/WeatherApp"
+                ><span class="text-purple-600 dark:text-red-600"
+                  >GitHub</span
+                ></a
+              >
             </p>
           </div>
-
-          <!-- Introduction Hungarian -->
-
           <div
-            class="lang-hu h-70 z-10 mt-20 hidden w-11/12 flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:mt-0 sm:h-40 sm:w-[350px] md:mt-0 md:h-60 md:w-[400px] lg:h-72 lg:w-[500px]"
+            class="lang-hu z-10 mx-auto mb-4 hidden h-auto w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-auto sm:w-5/12 md:h-auto md:w-5/12 lg:h-auto lg:w-96"
           >
-            <!-- Header Hungarian -->
-            <p
-              class="mb-1 mr-5 pl-5 text-justify indent-4 leading-snug sm:mr-9 sm:pl-9 sm:text-xs md:text-sm lg:text-base"
+            <h1
+              class="sm:text-md pb-4 pt-5 text-center text-xl font-semibold md:text-xl lg:text-2xl"
             >
-              Húsz éves vagyok és Budapesten élek. Az ELTE PPK harmadéves
-              pszichológia BA hallgatója vagyok. Hobbiként kezdtem foglalkozni a
-              webfejlesztéssel, de hamar szenvedélyemmé vált. Jelenleg első nagy
-              projektemen dolgozom, egy vállalkozás weboldalán. &nbsp;
+              WeatherApp
+            </h1>
+            <p
+              class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
+            >
+              Ezt a web alkalmazást a JavaScript tanulásom részeként
+              készítettem. A Weather API-t használja az aktuális időjárás,
+              hőmérséklet, páratartalom, szélsebesség és eső valószínűségének
+              megjelenítéséhez. Bátran
+              <a href="https://magyarmatyas.me/miniprojects/WeatherApp/"
+                ><span class="text-purple-600 dark:text-red-600"
+                  >próbáld ki</span
+                ></a
+              >
+              vagy nézd meg a kódot
+              <a
+                href="https://github.com/magyarmatyas/magyarmatyas.github.io/tree/main/miniprojects/WeatherApp"
+                ><span class="text-purple-600 dark:text-red-600"
+                  >GitHub-on</span
+                ></a
+              >
             </p>
           </div>
-
-          <!-- Profile photo -->
+          <div
+            class="lang-en z-10 mx-auto mb-4 h-auto w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-auto sm:w-5/12 md:h-auto md:w-5/12 lg:h-auto lg:w-96"
+          >
+            <h1
+              class="sm:text-md pb-4 pt-5 text-center text-xl font-semibold md:text-xl lg:text-2xl"
+            >
+              Webshop of a local business
+            </h1>
+            <p
+              class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
+            >
+              I'm currently working on this project. It's a website for a local
+              business. I'm using React and Next.js for the front-end and
+              Express.js for the back-end, and MongoDB for the database. The
+              site will have a webshop and a blog, I'm using Tailwind CSS for
+              styling.
+            </p>
+          </div>
+          <div
+            class="lang-hu z-10 mx-auto mb-4 hidden h-auto w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-auto sm:w-5/12 md:h-auto md:w-5/12 lg:h-auto lg:w-96"
+          >
+            <h1
+              class="sm:text-md pb-4 pt-5 text-center text-xl font-semibold md:text-xl lg:text-2xl"
+            >
+              Egy helyi vállalkozás webshopja
+            </h1>
+            <p
+              class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
+            >
+              Jelenleg ezen a projekten dolgozom. Egy helyi vállalkozás
+              webshopját készítem. A front-endhez Reactet és Next.js-t, a
+              back-endhez Express.js-t, az adatbázishoz MongoDB-t, a stílusokhoz
+              pedig Tailwindet használok. A weboldalon lesz egy webshop és egy
+              blog.
+            </p>
+          </div>
+          <div
+            class="lang-en z-10 mx-auto mb-4 h-auto w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-auto sm:w-5/12 md:h-auto md:w-5/12 lg:h-auto lg:w-96"
+          >
+            <h1
+              class="sm:text-md pb-4 pt-5 text-center text-xl font-semibold md:text-xl lg:text-2xl"
+            >
+              Other projects coming soon
+            </h1>
+            <p
+              class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
+            >
+              At the moment these are the only projects I can show you. I'm
+              looking forward to working on more projects in the future. As soon
+              as I have something to show you, I will update this section.
+            </p>
+          </div>
+          <div
+            class="lang-hu z-10 mx-auto mb-4 hidden h-auto w-11/12 cursor-default select-none flex-col rounded-md bg-white text-slate-900 shadow-lg dark:bg-slate-700 dark:text-white dark:shadow-md dark:shadow-black sm:h-auto sm:w-5/12 md:h-auto md:w-5/12 lg:h-auto lg:w-96"
+          >
+            <h1
+              class="sm:text-md pb-4 pt-5 text-center text-xl font-semibold md:text-xl lg:text-2xl"
+            >
+              További projektek hamarosan
+            </h1>
+            <p
+              class="mb-2 px-5 pb-3 text-justify dark:text-white sm:text-xs md:text-sm lg:text-base"
+            >
+              Jelen pillanatban ezek az egyetlen projektek, amiket meg tudok
+              mutatni. Szeretnék a jövőben több projekten dolgozni. Amint lesz
+              bármi, amivel készen vagyok, frissítem ezt a részt.
+            </p>
+          </div>
         </div>
       </section>
       <section id="contact" class="hidden h-screen scroll-mt-20"></section>
