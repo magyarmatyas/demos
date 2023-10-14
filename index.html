@@ -743,19 +743,22 @@
 
               <div class="hidden w-3/4 flex-row justify-between sm:flex">
                 <input
+                  minlength="3"
+                  maxlength="30"
                   autocomplete="off"
                   type="text"
-                  placeholder="Name"
-                  class="full_name h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-6/12"
+                  placeholder="Full Name"
+                  class="full_name h-auto w-11/12 rounded-md border border-slate-900 py-2 pl-3 shadow-sm shadow-slate-900 invalid:text-red-700 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:invalid:border-red-700 invalid:focus:ring-red-700 sm:w-6/12"
                   required
                 />
                 <input
+                  minlength="9"
                   autocomplete="off"
                   type="tel"
                   maxlength="11"
                   onkeypress="return onlyNumberKey(event)"
                   placeholder="Phone Number"
-                  class="phone_number h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-[45%]"
+                  class="phone_number h-auto w-11/12 rounded-md border border-slate-900 py-2 pl-3 shadow-sm shadow-slate-900 invalid:text-red-700 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:invalid:border-red-700 focus:invalid:ring-red-700 sm:w-[45%]"
                   required
                 />
               </div>
@@ -763,19 +766,23 @@
               <!-- Name and Number Small Screen -->
 
               <input
+                minlength="3"
+                maxlength="30"
                 autocomplete="off"
                 type="text"
-                placeholder="Name"
-                class="full_name h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
+                placeholder="Full Name"
+                class="full_name h-auto w-11/12 rounded-md border border-slate-900 py-2 pl-3 pr-2 shadow-sm shadow-slate-900 invalid:text-red-700 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:invalid:border-red-700 focus:invalid:ring-red-700 sm:hidden sm:w-3/4"
                 required
               />
               <input
+                minlength="9"
+                maxlength="11"
                 autocomplete="off"
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}]"
                 onkeypress="return onlyNumberKey(event)"
                 placeholder="Phone Number"
-                class="phone_number h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
+                class="phone_number h-auto w-11/12 rounded-md border border-slate-900 py-2 pl-3 pr-2 shadow-sm shadow-slate-900 invalid:text-red-700 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:invalid:border-red-700 invalid:focus:ring-red-700 sm:hidden sm:w-3/4"
                 required
               />
 
@@ -786,18 +793,20 @@
                 autocomplete="off"
                 type="email"
                 placeholder="Email"
-                class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:w-3/4"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                class="h-auto w-11/12 rounded-md border border-slate-900 py-2 pl-3 pr-2 text-slate-900 shadow-sm shadow-slate-900 invalid:text-red-700 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:invalid:border-red-700 invalid:focus:ring-red-700 sm:w-3/4"
                 required
               />
 
               <!-- Message -->
 
               <textarea
+                minlength="10"
                 id="message"
                 autocomplete="off"
                 type="text"
                 placeholder="Message"
-                class="h-auto w-11/12 rounded-md pb-36 pl-3 pt-2 shadow-sm shadow-slate-900 sm:w-3/4"
+                class="h-auto w-11/12 rounded-md border border-slate-900 pb-36 pl-3 pt-2 shadow-sm shadow-slate-900 invalid:text-red-700 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:invalid:border-red-700 invalid:focus:ring-red-700 sm:w-3/4"
                 required
               ></textarea>
 
