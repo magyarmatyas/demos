@@ -832,6 +832,10 @@ html {
   width: 100%;
 }
 
+.w-11 {
+  width: 2.75rem;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -1203,6 +1207,10 @@ html {
   padding-top: 0.5rem;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -1248,6 +1256,14 @@ html {
   line-height: 1.75rem;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -1267,6 +1283,11 @@ html {
 .text-purple-600 {
   --tw-text-opacity: 1;
   color: rgb(147 51 234 / var(--tw-text-opacity));
+}
+
+.text-purple-700 {
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
 }
 
 .text-slate-900 {
@@ -1399,6 +1420,11 @@ body * {
 :is(.dark .dark\:text-red-600) {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-slate-900) {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:text-white) {
@@ -1547,6 +1573,10 @@ body * {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:w-11 {
+    width: 2.75rem;
   }
 
   .sm\:scroll-mt-16 {
@@ -1798,6 +1828,11 @@ body * {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-5xl {
