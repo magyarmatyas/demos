@@ -1389,6 +1389,11 @@ body * {
   transition-duration: 200ms;
 }
 
+.valid\:border-purple-600:valid {
+  --tw-border-opacity: 1;
+  border-color: rgb(147 51 234 / var(--tw-border-opacity));
+}
+
 .invalid\:border-red-700:invalid {
   --tw-border-opacity: 1;
   border-color: rgb(185 28 28 / var(--tw-border-opacity));
