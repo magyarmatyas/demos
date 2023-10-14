@@ -457,7 +457,7 @@
 
       <section
         id="projects"
-        class="relative mb-5 mt-20 select-none scroll-mt-16 sm:mt-0"
+        class="relative mb-16 mt-20 block scroll-mt-24 sm:mt-0 sm:min-h-[200px] sm:scroll-mt-16 md:min-h-[250px] lg:min-h-[300px]"
       >
         <!-- Projects background -->
 
@@ -631,33 +631,145 @@
         </div>
       </section>
 
-      <!-- Contact -->
+      <!-- Contact ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-      <section
-        id="contact"
-        class="relative mb-5 mt-20 select-none scroll-mt-16 sm:mt-0"
-      >
+      <section id="contact" class="relative mb-5 block">
         <!-- Contact background -->
 
-        <!-- <div
-          class="absolute left-12 z-0 mt-52 hidden h-1/4 w-1/4 rotate-90 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400 blur-[118px] duration-500 sm:block"
-        ></div> -->
+        <div
+          class="absolute left-10 top-16 -z-10 mt-52 hidden h-1/4 w-2/3 -rotate-[calc(30deg)] rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 blur-[118px] duration-500 sm:block"
+        ></div>
 
         <div
-          class="absolute left-48 top-16 -z-10 mt-52 hidden h-1/4 w-2/3 -rotate-12 rounded-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 blur-[118px] duration-500 sm:block"
+          class="absolute bottom-28 right-12 z-0 mt-52 hidden h-1/4 w-1/4 rotate-45 rounded-full bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500 blur-[118px] duration-500 sm:block"
         ></div>
 
         <!-- Contact Body -->
 
         <div
-          class="z-10 flex h-auto flex-col items-center justify-center pt-5 sm:mx-5 sm:h-[calc(100vh-73px)] md:mx-6 lg:mx-16 xl:mx-40"
+          class="z-10 flex h-auto flex-col items-center justify-center sm:mx-5 sm:h-[calc(100vh-73px)] sm:min-h-[750px] md:mx-6 md:min-h-[850px] lg:mx-16 lg:min-h-[800px] xl:mx-40"
           id="projects-div"
         >
-          <h1
-            class="sm:text-md pb-4 pt-5 text-center text-3xl font-semibold text-slate-900 dark:text-white md:text-xl lg:text-5xl"
+          <!-- Contact Header English -->
+
+          <div
+            class="mb-10 flex h-auto w-11/12 items-center justify-center rounded-md bg-white text-center shadow-lg dark:bg-slate-700 dark:shadow-md dark:shadow-black 2xl:w-1/2"
           >
-            Did I catch your attention?
-          </h1>
+            <h1
+              class="lang-en sm:text-md px-6 pb-5 pt-7 text-center text-2xl font-semibold text-slate-900 dark:text-white md:text-2xl lg:text-5xl"
+            >
+              Did I catch your attention?
+            </h1>
+
+            <!-- Contact Header Hungarian -->
+
+            <h1
+              class="lang-hu sm:text-md hidden px-7 pb-5 pt-7 text-center text-2xl font-semibold text-slate-900 dark:text-white md:text-2xl lg:text-5xl"
+            >
+              Felkeltettem az érdeklődésed?
+            </h1>
+          </div>
+
+          <!-- Contact Box English -->
+
+          <div
+            class="z-10 flex h-auto w-11/12 flex-col justify-center rounded-md bg-white text-center shadow-lg dark:bg-slate-700 dark:shadow-md dark:shadow-black 2xl:w-1/2"
+          >
+            <h1
+              class="lang-en sm:text-md px-6 pb-5 pt-7 text-center text-2xl font-semibold text-slate-900 dark:text-white md:text-xl lg:text-5xl"
+            >
+              Contact Me!
+            </h1>
+            <h1
+              class="lang-hu sm:text-md mx-auto hidden px-6 pb-5 pt-7 text-center text-2xl font-semibold text-slate-900 dark:text-white md:text-2xl lg:text-5xl"
+            >
+              Vedd fel velem a kapcsolatot!
+            </h1>
+
+            <div
+              class="mb-5 flex flex-col items-center justify-center space-y-3 text-slate-900"
+            >
+              <div class="hidden w-3/4 flex-row justify-between sm:flex">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-6/12"
+                  required
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-[45%]"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                placeholder="Name"
+                class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
+                required
+              />
+              <input
+                type="tel"
+                onkeypress="return onlyNumberKey(event)"
+                placeholder="Phone Number"
+                class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:w-3/4"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Message"
+                class="h-auto w-11/12 rounded-md pb-36 pl-3 pt-2 shadow-sm shadow-slate-900 sm:w-3/4"
+                required
+              />
+              <button
+                class="h-auto w-11/12 rounded-md bg-purple-600 py-2 font-semibold text-white transition-all duration-150 hover:bg-purple-700 sm:w-3/4"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+          <div class="mx-auto mt-4 flex flex-row items-center sm:mt-10">
+            <a
+              href="https://github.com/magyarmatyas"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                class="block w-9 dark:hidden sm:w-10"
+                src="./assets/github-mark.svg"
+                alt="github"
+              />
+              <img
+                class="hidden w-9 dark:block sm:w-10"
+                src="./assets/github-mark-white.svg"
+                alt="github"
+              />
+            </a>
+            <a
+              href="https://twitter.com/MagyarAMatyas"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="pl-4"
+            >
+              <img
+                src="./assets/twitter-white.svg"
+                alt="twitter"
+                class="hidden w-9 dark:block sm:w-10"
+              />
+              <img
+                src="./assets/twitter.svg"
+                alt="twitter"
+                class="block w-9 dark:hidden sm:w-10"
+              />
+            </a>
+          </div>
         </div>
       </section>
     </div>
