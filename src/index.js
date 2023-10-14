@@ -103,7 +103,7 @@ const sendMail = function () {
     message: document.querySelector("#message").value,
   };
   emailjs
-    .send("service_0sje2rc", "template_a8a8pka", params, "zhaBB2mnl2EBe-bL2")
+    .send("service_0sje2rc", "template_a8a8pka", params)
     .then(function (res) {
       alert("Your message has been sent successfully!");
     })
