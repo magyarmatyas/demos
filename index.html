@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-62S280YKDB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-62S280YKDB");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magyar Mátyás</title>
@@ -690,7 +705,7 @@
             <!-- Contact Header English -->
 
             <h1
-              class="lang-en mx-auto px-7 pb-5 pt-7 text-center text-3xl font-medium text-purple-700 dark:text-slate-900 lg:text-5xl"
+              class="lang-en mx-auto px-7 pb-5 pt-7 text-center text-3xl font-medium text-purple-600 dark:text-red-700 lg:text-5xl"
             >
               Did I catch your attention?
             </h1>
@@ -698,7 +713,7 @@
             <!-- Contact Header Hungarian -->
 
             <h1
-              class="lang-hu mx-auto hidden px-7 pb-5 pt-7 text-center text-3xl font-medium text-purple-700 dark:text-slate-900 lg:text-5xl"
+              class="lang-hu mx-auto hidden px-7 pb-5 pt-7 text-center text-3xl font-medium text-purple-600 dark:text-red-700 lg:text-5xl"
             >
               Felkeltettem érdeklődésed?
             </h1>
@@ -722,7 +737,7 @@
             <!-- Contact Form -->
 
             <div
-              class="mb-5 flex flex-col items-center justify-center space-y-3 text-slate-900"
+              class="mb-10 flex flex-col items-center justify-center space-y-3 text-slate-900"
             >
               <!-- Name and Number Big Screen -->
 
@@ -790,7 +805,7 @@
 
               <button
                 onclick="sendMail()"
-                class="h-auto w-11/12 rounded-md bg-purple-600 py-2 font-semibold text-white transition-all duration-150 hover:bg-purple-700 sm:w-3/4"
+                class="h-auto w-11/12 rounded-md bg-purple-600 py-2 font-semibold text-white shadow-xl transition-all duration-150 hover:bg-purple-700 dark:bg-red-700 hover:dark:bg-red-800 sm:w-3/4"
               >
                 Send
               </button>
@@ -799,7 +814,9 @@
 
           <!-- Contact Footer -->
 
-          <div class="mx-auto mt-4 flex flex-row items-center sm:mt-10">
+          <div
+            class="mx-auto mt-4 flex flex-row items-center space-x-5 sm:mt-10"
+          >
             <!-- Github Logo -->
 
             <a
