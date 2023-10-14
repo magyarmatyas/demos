@@ -24,8 +24,17 @@
         class="inset-0 flex h-[calc(100dvh)] flex-col justify-between md:h-screen"
       >
         <div class="flex items-center justify-between dark:text-white">
-          <div>
-            <h1 class="ml-4 mt-6 text-2xl">Magyar Mátyás</h1>
+          <div class="ml-4 mt-6 items-center px-2">
+            <img
+              src="./assets/logo-dark.svg"
+              alt="Logo"
+              class="my-auto block w-10 dark:hidden sm:w-12"
+            />
+            <img
+              src="./assets/logo-white.svg"
+              alt="Logo"
+              class="my-auto hidden w-10 dark:block sm:w-12"
+            />
           </div>
 
           <div class="mr-4 mt-6 flex flex-row items-center px-2">
@@ -691,44 +700,56 @@
             >
               <div class="hidden w-3/4 flex-row justify-between sm:flex">
                 <input
+                  autocomplete="off"
                   type="text"
                   placeholder="Name"
-                  class="h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-6/12"
+                  class="full_name h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-6/12"
                   required
                 />
                 <input
+                  autocomplete="off"
                   type="tel"
+                  maxlength="11"
+                  onkeypress="return onlyNumberKey(event)"
                   placeholder="Phone Number"
-                  class="h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-[45%]"
+                  class="phone_number h-auto w-11/12 rounded-md py-2 pl-3 shadow-sm shadow-slate-900 sm:w-[45%]"
                   required
                 />
               </div>
               <input
+                autocomplete="off"
                 type="text"
                 placeholder="Name"
-                class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
+                class="full_name h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
                 required
               />
               <input
+                autocomplete="off"
                 type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}]"
                 onkeypress="return onlyNumberKey(event)"
                 placeholder="Phone Number"
-                class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
+                class="phone_number h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:hidden sm:w-3/4"
                 required
               />
               <input
-                type="text"
+                id="email_add"
+                autocomplete="off"
+                type="email"
                 placeholder="Email"
                 class="h-auto w-11/12 rounded-md py-2 pl-3 pr-2 shadow-sm shadow-slate-900 sm:w-3/4"
                 required
               />
-              <input
+              <textarea
+                id="message"
+                autocomplete="off"
                 type="text"
                 placeholder="Message"
                 class="h-auto w-11/12 rounded-md pb-36 pl-3 pt-2 shadow-sm shadow-slate-900 sm:w-3/4"
                 required
-              />
+              ></textarea>
               <button
+                onclick="sendMail()"
                 class="h-auto w-11/12 rounded-md bg-purple-600 py-2 font-semibold text-white transition-all duration-150 hover:bg-purple-700 sm:w-3/4"
               >
                 Send
@@ -775,6 +796,16 @@
     </div>
 
     <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY");
+      })();
+    </script>
+
     <script src="./src/index.js"></script>
   </body>
 </html>

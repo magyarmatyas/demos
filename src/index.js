@@ -82,8 +82,35 @@ links.forEach((link) => {
 });
 
 function onlyNumberKey(evt) {
-  // Only ASCII character in that range allowed
   let ASCIICode = evt.which ? evt.which : evt.keyCode;
   if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
   return true;
 }
+
+const sendMail = function () {
+  let fullName;
+  if (document.querySelectorAll(".full_name")[0].value === "") {
+    fullName = document.querySelectorAll(".full_name")[1];
+    phone_number = document.querySelectorAll(".phone_number")[1];
+  } else {
+    fullName = document.querySelectorAll(".full_name")[0];
+    phone_number = document.querySelectorAll(".phone_number")[0];
+  }
+  const params = {
+    name: fullName.value,
+    email: document.querySelector("#email_add").value,
+    phone_number: phone_number.value,
+    message: document.querySelector("#message").value,
+  };
+  emailjs
+    .send("service_0sje2rc", "template_a8a8pka", params, "zhaBB2mnl2EBe-bL2")
+    .then(function (res) {
+      alert("Your message has been sent successfully!");
+    })
+    .then(function (res) {
+      fullName.value = "";
+      document.querySelector("#email_add").value = "";
+      phone_number.value = "";
+      document.querySelector("#message").value = "";
+    });
+};
