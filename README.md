@@ -1,5 +1,5 @@
 # Projects
 
-[Portfolio](https://magyarmatyas.github.io/portfolio/src/)
+[Portfolio](https://magyarmatyas.me/)
 
-[Weather App](https://magyarmatyas.github.io/WeatherApp/)
+[Weather App](https://magyarmatyas.me/miniprojects/WeatherApp/)
