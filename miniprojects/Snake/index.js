@@ -6,12 +6,17 @@ const left = document.getElementById("left");
 const right = document.getElementById("right");
 const buttons = [up, down, left, right];
 const highScoreNumber = document.getElementById("highscore-number");
+const gameOverText = document.getElementById("game-over");
+const diffOne = document.getElementById("diff-one");
+const diffTwo = document.getElementById("diff-two");
+const diffThree = document.getElementById("diff-three");
 let snake = { x: 0, y: 0 };
 let velocity = { x: 0, y: 0 };
 let foodPos = { x: 0, y: 0 };
 let snakeBody = [];
 let scoreNumber = 0;
 let highScore = localStorage.getItem("high-score") || 0;
+let difficulty = 1;
 highScoreNumber.innerText = `${highScore}`;
 direction = "right";
 
@@ -35,6 +40,7 @@ const setFoodPos = () => {
 
 const gameLoop = () => {
   velocity = { x: 1, y: 0 };
+  let diff;
   const check = () => {
     let html = `<div class="bg-red-600 row-span-1 col-span-1" style="grid-area: ${foodPos.y} / ${foodPos.x}"></div>`;
     if (snake.x === foodPos.x && snake.y === foodPos.y) {
@@ -70,9 +76,10 @@ const gameLoop = () => {
       scoreNumber = 0;
       score.innerHTML = scoreNumber;
       snakeBody = [];
+      gameOverText.classList.toggle("hidden");
+      gameOverText.classList.toggle("flex");
+      clearInterval(diff);
       gameArea.innerHTML = "";
-      alert("Game Over");
-      clearInterval(checking);
     }
     if (snakeBody.length > 0) {
       snakeBody.forEach((body) => {
@@ -84,14 +91,21 @@ const gameLoop = () => {
           scoreNumber = 0;
           score.innerHTML = scoreNumber;
           snakeBody = [];
-          alert("Game Over");
-          clearInterval(checking);
+          gameOverText.classList.toggle("hidden");
+          gameOverText.classList.toggle("flex");
+          clearInterval(diff);
           gameArea.innerHTML = "";
         }
       });
     }
   };
-  const checking = setInterval(check, 500);
+  if (difficulty === 1) {
+    diff = setInterval(check, 500);
+  } else if (difficulty === 2) {
+    diff = setInterval(check, 250);
+  } else if (difficulty === 3) {
+    diff = setInterval(check, 100);
+  }
 };
 
 up.addEventListener("click", () => {
@@ -151,6 +165,10 @@ addEventListener("keydown", (e) => {
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     if (snakeBody.length === 0) {
+      if (gameOverText.classList.contains("flex")) {
+        gameOverText.classList.toggle("hidden");
+        gameOverText.classList.toggle("flex");
+      }
       setSnakePos();
       setFoodPos();
       gameLoop();
@@ -160,8 +178,33 @@ buttons.forEach((button) => {
 
 addEventListener("keydown", (e) => {
   if (e.code === "Space" && snakeBody.length === 0) {
+    if (gameOverText.classList.contains("flex")) {
+      gameOverText.classList.toggle("hidden");
+      gameOverText.classList.toggle("flex");
+    }
     setSnakePos();
     setFoodPos();
     gameLoop();
   }
+});
+
+diffOne.addEventListener("click", () => {
+  difficulty = 1;
+  diffOne.style = "background-color: red";
+  diffTwo.style = "background-color: rgb(59 130 246)";
+  diffThree.style = "background-color: rgb(59 130 246)";
+});
+
+diffTwo.addEventListener("click", () => {
+  difficulty = 2;
+  diffOne.style = "background-color: rgb(59 130 246)";
+  diffTwo.style = "background-color: red";
+  diffThree.style = "background-color: rgb(59 130 246)";
+});
+
+diffThree.addEventListener("click", () => {
+  difficulty = 3;
+  diffOne.style = "background-color: rgb(59 130 246)";
+  diffTwo.style = "background-color: rgb(59 130 246)";
+  diffThree.style = "background-color: red";
 });
