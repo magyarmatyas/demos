@@ -29,13 +29,14 @@ const setFoodPos = () => {
   const random = () => {
     foodPos.x = Math.floor(Math.random() * 20 + 1);
     foodPos.y = Math.floor(Math.random() * 20 + 1);
+    snakeBody.forEach((body) => {
+      if (foodPos.x === body[0] && foodPos.y === body[1]) {
+        random();
+      }
+    });
   };
 
   random();
-
-  if (foodPos.x === snake.x && foodPos.y === snake.y) {
-    random();
-  }
 };
 
 const gameLoop = () => {
@@ -45,7 +46,6 @@ const gameLoop = () => {
     let html = `<div class="bg-red-600 row-span-1 col-span-1" style="grid-area: ${foodPos.y} / ${foodPos.x}"></div>`;
     if (snake.x === foodPos.x && snake.y === foodPos.y) {
       scoreNumber += 1;
-      console.log(scoreNumber);
       score.innerHTML = scoreNumber;
       if (scoreNumber > highScore) {
         highScore = scoreNumber;
