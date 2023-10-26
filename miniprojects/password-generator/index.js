@@ -11,6 +11,7 @@ const generate = document.getElementById("generate");
 const lengthNumber = document.getElementById("length");
 const copy = document.getElementById("copy");
 const tick = document.getElementById("tick");
+let is_checked = 1;
 const alphabet = [
   "A",
   "B",
@@ -82,7 +83,7 @@ const generatePassword = () => {
   }
   if (lowercase.checked) {
     passArray = passArray.concat(
-      alphabet.map((letter) => letter.toLowerCase())
+      alphabet.map((letter) => letter.toLowerCase()),
     );
   }
   if (numbers.checked) {
@@ -95,12 +96,11 @@ const generatePassword = () => {
     passArray = passArray.concat(" ");
   }
   for (let i = 0; i < passLength; i++) {
+    randomChar = passArray[Math.floor(Math.random() * passArray.length)];
     if (duplicate.checked) {
-      !pass.includes(passArray[Math.floor(Math.random() * passArray.length)])
-        ? (pass += passArray[Math.floor(Math.random() * passArray.length)])
-        : i--;
+      pass.includes(randomChar) ? i-- : (pass += randomChar);
     } else {
-      pass += passArray[Math.floor(Math.random() * passArray.length)];
+      pass += randomChar;
     }
   }
   password.value = pass;
@@ -130,5 +130,28 @@ copy.addEventListener("click", () => {
 });
 
 options.forEach((option) => {
+  option != lowercase ? (option.checked = false) : (option.checked = true);
   option.addEventListener("click", generatePassword);
+  option.addEventListener("click", () => {
+    option.checked ? (is_checked += 1) : (is_checked -= 1);
+    if (is_checked == 0) {
+      password.value = "";
+      lowercase.checked = true;
+      is_checked = 1;
+      generatePassword();
+    }
+    if (is_checked == 1 && numbers.checked) {
+      duplicate.disabled = true;
+    } else if (is_checked == 2 && numbers.checked && duplicate.checked) {
+      duplicate.checked = false;
+      is_checked--;
+      duplicate.disabled = true;
+    } else if (is_checked == 1 && duplicate.checked) {
+      duplicate.checked = false;
+      is_checked--;
+      duplicate.disabled = true;
+    } else {
+      duplicate.disabled = false;
+    }
+  });
 });
